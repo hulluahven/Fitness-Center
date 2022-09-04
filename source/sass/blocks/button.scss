@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid $color-default-white;
+  text-decoration: none;
+  color: $color-default-white;
+  background-color: transparent;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.06px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+// .logo {
+// }
+// .logo--header {
+// }
+
+.logo__wrapper {
+  margin-top: 30px;
+
+  @media (max-width: $vp-1199) {
+    margin-top: 41px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 21px;
+  }
+}
+
+.logo__gym {
+  display: none;
+}
+
+.logo__main {
+  fill: $color-default-white;
+
+  @media (max-width: $vp-1199) {
+    width: 84px;
+    height: 18px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 65px;
+    height: 15px;
+  }
+}

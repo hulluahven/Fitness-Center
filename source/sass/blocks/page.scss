@@ -1,0 +1,14 @@
+.page {
+  scroll-behavior: smooth;
+}
+// .page__body {
+
+// }
+
+.page__body-wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
