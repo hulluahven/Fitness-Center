@@ -1,0 +1,26 @@
+
+.offer-list {
+  list-style: none;
+  margin: 0;
+  padding: 133px 0 0 9px;
+  text-align: end;
+
+  @media (max-width: $vp-1199) {
+    padding-top: 96px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 91px;
+    padding-left: 0;
+  }
+}
+
+.offer-list__item {
+  color: $color-default-white;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  padding-right: 10px;
+}
