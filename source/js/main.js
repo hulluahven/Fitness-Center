@@ -4,6 +4,9 @@ const gymVideo = document.querySelector('[data-video]');
 const gymLink = document.querySelector('[data-link]');
 const gymButton = document.querySelector('[data-button]');
 
+const Buttons = document.querySelectorAll('.tabs__nav-button"');
+const Tabs = document.querySelectorAll('.tabs__content');
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +38,31 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
   }
+
+
+  Buttons.forEach(function (item) {
+    item.addEventListener('click', () => {
+      // console.log("dadad");
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute('data-tab');
+      let currentTab = document.querySelector(tabId);
+
+      if (!currentBtn.classList.contains('tabs__nav-button--active')) {
+        Buttons.forEach(function () {
+          item.classList.remove('tabs__nav-button--active');
+        });
+
+        Tabs.forEach(function () {
+          item.classList.remove('tabs__content--active');
+        });
+        currentBtn.classList.add('tabs__nav-button--active');
+        currentTab.classList.add('tabs__content--active');
+      }
+
+    });
+  });
+
+  // document.querySelector.(".tabs__nav-button").click();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

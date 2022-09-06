@@ -401,6 +401,14 @@ template {
 }
 
 @font-face {
+  font-family: "RobotoCondensedBold";
+  src: url("../fonts/RobotoCondensedBold.woff2") format("woff2"), url("../fonts/RobotoCondensedBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "RobotoCondensedRegular";
   src: url("../fonts/RobotoCondensedRegular.woff2") format("woff2"), url("../fonts/RobotoCondensedRegular.woff") format("woff");
   font-style: normal;
@@ -686,7 +694,7 @@ template {
   flex-wrap: wrap;
   padding: 0 20px;
   padding-top: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 120px;
 }
 
 .gym__info-container {
@@ -821,6 +829,234 @@ template {
   border: none;
 }
 
+.tickets {
+  background-color: #f8f9fc;
+  position: relative;
+  z-index: 0;
+}
+
+.tickets::after {
+  content: "";
+  background: url("../img/promo/disk-desktop.png") no-repeat;
+  position: absolute;
+  bottom: -80px;
+  right: -63px;
+  width: 350px;
+  height: 350px;
+}
+
+.tickets__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 119px 20px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.tickets__wrapper h2 {
+  color: #102654;
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 33px;
+}
+
+.tabs__nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  width: 29.5%;
+  margin: 0 auto 52px;
+  padding: 0;
+}
+
+.tabs__nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+}
+
+.tabs__nav-item {
+  padding-right: 47px;
+}
+
+.tabs__nav-item:nth-child(3n) {
+  padding-right: 0;
+}
+
+.tabs__nav-button {
+  background: transparent;
+  border: 0;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+  cursor: pointer;
+  padding: 0;
+}
+
+.tabs__nav-button--active {
+  color: #102654;
+  position: relative;
+}
+
+.tabs__nav-button--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 2px;
+  background-color: #d10a42;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.tabs__content-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.tabs__content-item {
+  background-color: #ffffff;
+  margin-right: 44px;
+  margin-bottom: 44px;
+  width: 30.8%;
+}
+
+.tabs__content-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.tabs__content-wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 55px 68px 60px;
+  border: 7px solid transparent;
+  position: relative;
+}
+
+.tabs__content-item:hover .tabs__content-wrapper {
+  -o-border-image: -o-linear-gradient(left top, #d10a42, #00359f);
+  border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f));
+  border-image: linear-gradient(to right bottom, #d10a42, #00359f);
+  border-image-slice: 1;
+}
+
+.tabs__content-item h3 {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  color: #102654;
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.tabs__content-item span {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #495a7d;
+  padding-bottom: 11px;
+}
+
+.tabs__content-item p {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+  position: relative;
+  margin: 0 auto;
+  padding-right: 43px;
+  padding-bottom: 35px;
+  z-index: 2;
+  margin-top: -98px;
+  width: 164px;
+}
+
+.tabs__content-item p::before {
+  content: "";
+  background: url("../img/svg/rouble.svg") no-repeat;
+  position: absolute;
+  bottom: 23%;
+  right: 5%;
+  width: 39px;
+  height: 71px;
+  color: #102654;
+}
+
+.tabs__content-item b {
+  color: #e8e8e8;
+  opacity: 0.48;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  position: relative;
+  z-index: 0;
+}
+
+.tabs__content-link {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.06px;
+  letter-spacing: 0.05em;
+  color: #102654;
+  border: 2px solid #102654;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 24px 12px;
+}
+
+.tabs__content-link:hover {
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-color: transparent;
+  background-origin: border-box;
+  color: #ffffff;
+}
+
 .footer {
   background-color: #030a1a;
 }
@@ -916,6 +1152,7 @@ template {
     flex-direction: column;
     padding-top: 51px;
     width: 88.2%;
+    padding-bottom: 100px;
   }
 
   .gym__info-container {
@@ -974,6 +1211,64 @@ template {
   .video__button svg {
     width: 71px;
     height: 71px;
+  }
+
+  .tickets::after {
+    background: url("../img/promo/disk-tablet.png") no-repeat;
+    bottom: -31px;
+    right: -2px;
+  }
+
+  .tickets__wrapper {
+    padding-top: 100px;
+    padding-bottom: 44px;
+  }
+
+  .tickets__wrapper h2 {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 30px;
+  }
+
+  .tabs__nav {
+    width: 332px;
+  }
+
+  .tabs__nav::before {
+    bottom: -13px;
+  }
+
+  .tabs__nav-item {
+    padding-right: 54px;
+  }
+
+  .tabs__nav-button {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tabs__nav-button--active::after {
+    bottom: -13px;
+  }
+
+  .tabs__content {
+    width: 61%;
+    margin: 0 auto;
+  }
+
+  .tabs__content-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+
+  .tabs__content-wrapper {
+    padding: 60px 111px;
+  }
+
+  .tabs__content-item p::before {
+    bottom: 23%;
+    right: 6%;
   }
 }
 
@@ -1048,6 +1343,7 @@ template {
   .gym__wrapper {
     padding: 52px 0 0;
     width: 100%;
+    padding-bottom: 48px;
   }
 
   .gym__info-container {
@@ -1081,9 +1377,91 @@ template {
 
   .video {
     width: 100%;
+    height: 191px;
   }
 
   .video__button {
     margin-top: -25%;
+  }
+
+  .tickets::after {
+    display: none;
+  }
+
+  .tickets__wrapper {
+    padding: 69px 15px 30px;
+  }
+
+  .tickets__wrapper h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 12px;
+  }
+
+  .tabs__nav {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 4px;
+    width: 290px;
+    margin-bottom: 44px;
+  }
+
+  .tabs__nav::before {
+    bottom: -10px;
+  }
+
+  .tabs__nav-item {
+    padding-right: 45px;
+  }
+
+  .tabs__nav-button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .tabs__nav-button--active::after {
+    bottom: -14px;
+    width: 113%;
+  }
+
+  .tabs__content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tabs__content-item {
+    margin-bottom: 39px;
+  }
+
+  .tabs__content-wrapper {
+    padding: 44px 34px;
+  }
+
+  .tabs__content-item h3 {
+    font-size: 22px;
+    line-height: 24.23px;
+    padding-bottom: 8px;
+  }
+
+  .tabs__content-item p {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .tabs__content-item p {
+    margin: -77px auto 0;
+    padding-right: 32px;
+    padding-bottom: 30px;
+  }
+
+  .tabs__content-item p::before {
+    background-size: 59%;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .tabs__content-item b {
+    font-size: 80px;
+    line-height: 120px;
   }
 }
