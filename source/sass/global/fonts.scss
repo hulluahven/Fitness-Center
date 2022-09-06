@@ -18,9 +18,19 @@
 
 
 @font-face {
-  font-family: "RobotoCondensed";
+  font-family: "RobotoCondensedRegular";
   src: url("../fonts/RobotoCondensedRegular.woff2") format("woff2"),
     url("../fonts/RobotoCondensedRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "RobotoCondensedLight";
+  src: url("../fonts/RobotoCondensedLight.woff2") format("woff2"),
+    url("../fonts/RobotoCondensedLight.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
