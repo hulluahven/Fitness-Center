@@ -1,5 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+const gymVideo = document.querySelector('[data-video]');
+const gymLink = document.querySelector('[data-link]');
+const gymButton = document.querySelector('[data-button]');
 
 // ---------------------------------
 
@@ -12,7 +15,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  if (gymButton) {
+    gymButton.addEventListener('click', () => {
+      createIFrame();
+      gymLink.remove();
+      gymButton.remove();
+    });
 
+    const createIFrame = () => {
+      let iframe = document.createElement('iframe');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('allow', 'autoplay');
+      iframe.setAttribute('src', setURL());
+      gymVideo.appendChild(iframe);
+    };
+
+    const setURL = () => {
+      return 'https://www.youtube.com/embed/9TZXsZItgdw?rel=0&showinfo=0&autoplay=1';
+    };
+
+  }
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
