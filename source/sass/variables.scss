@@ -16,12 +16,18 @@ $sapphire:                          #102654;
 $torch-red:                         #ed0233;
 $stuff-cover:                       rgba(16, 38, 84, 0.89);
 $black-russian:                     #030a1a;
+$ghost-white:                       #f8f9fc;
+$crimson:                           #d10a42;
+$chamray:                           #495a7d;
+$egyptian-blue:                     #103aae;
+$whisper:                           #e8e8e8;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $header-gradient:                   conic-gradient(from 130.31deg at 16.03% 46.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $button-gradient:                   linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+$border-gradient:                   linear-gradient(to right bottom, #d10a42, #00359f);
 // Typography
 // ---------------------------------
 
