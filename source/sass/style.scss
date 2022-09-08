@@ -10,7 +10,7 @@
 
 @import "variables";
 @import "global/fonts";
-
+@import "global/visually-hidden";
 // Blocks
 // ---------------------------------
 
@@ -22,13 +22,17 @@
 @import "blocks/button";
 @import "blocks/promo";
 @import "blocks/offer-list";
-@import "blocks/social";
+@import "blocks/header-social";
 @import "blocks/gym";
 @import "blocks/video";
 @import "blocks/tickets";
 @import "blocks/tabs";
 @import "blocks/promotion";
+@import "blocks/feedback";
 @import "blocks/footer";
+@import "blocks/main-nav";
+@import "blocks/social-networks";
+
 
 // ---------------------------------
 

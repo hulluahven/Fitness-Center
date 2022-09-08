@@ -1,4 +1,4 @@
-.social {
+.header-social {
   list-style: none;
   padding: 0;
   display: flex;
@@ -7,11 +7,11 @@
   margin: 0 0 45px;
 }
 
-.social__item {
+.header-social__item {
   padding: 8px 0;
 }
 
-.social__link {
+.header-social__link {
   color: $color-default-white;
   text-decoration: none;
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
