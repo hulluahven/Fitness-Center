@@ -1228,6 +1228,411 @@ template {
   background-position: center;
 }
 
+.features {
+  background-color: #f8f9fc;
+}
+
+.features__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 119px 20px 60px;
+}
+
+.features__wrapper h2 {
+  color: #102654;
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 41px;
+}
+
+.features__list {
+  margin: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 16px 240px 16px 1fr;
+  grid-template-columns: 1fr 240px 1fr;
+  -ms-grid-rows: auto 129px auto;
+  grid-template-areas: "square machines parking" "comfort machines coaches";
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 129px;
+  padding: 0 65px;
+}
+
+.features__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+.features__item--square {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: square;
+  padding-left: 22px;
+  position: relative;
+}
+
+.features__item--square .features__description {
+  padding-left: 28px;
+}
+
+.features__item--parking {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: parking;
+  position: relative;
+}
+
+.features__item--square::before,
+.features__item--parking::before {
+  content: "";
+  position: absolute;
+  bottom: -78px;
+  left: -9px;
+  width: 347px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+}
+
+.features__item--parking::before {
+  content: "";
+  position: absolute;
+  bottom: -78px;
+  left: 45px;
+  width: 347px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+}
+
+.features__item--machines {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: machines;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #102654;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.features__item--comfort {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: comfort;
+  padding-left: 15px;
+}
+
+.features__item--coaches {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: coaches;
+}
+
+.features__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 110px;
+}
+
+.features__numbers p {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 106px;
+  color: transparent;
+  background-image: -o-linear-gradient(322.39deg, #d10a42 0%, #0041ca 45.58%);
+  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  height: 85px;
+}
+
+.features__numbers span {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2e35ac;
+}
+
+.features__numbers--machines {
+  width: 100%;
+}
+
+.features__numbers--machines p {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 111px;
+  color: #ffffff;
+  padding-top: 35px;
+}
+
+.features__numbers--machines span {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: #ffffff;
+  padding-top: 12px;
+}
+
+.features__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 23px;
+}
+
+.features__description h3 {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: #102654;
+  margin: 0;
+}
+
+.features__description--square h3 {
+  padding-bottom: 6px;
+}
+
+.features__description p {
+  font-family: "RobotoCondensedLight", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #2e35ac;
+  margin: 0;
+}
+
+.features__description--machines {
+  margin-bottom: 24px;
+  padding: 0 26px;
+}
+
+.features__description--machines p {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.features__item--parking,
+.features__item--coaches {
+  padding-left: 36px;
+}
+
+.features__description--comfort {
+  padding-left: 27px;
+}
+
+.features__description--comfort h3 {
+  padding-bottom: 6px;
+}
+
+.features__numbers--parking p,
+.features__numbers--coaches p {
+  padding-left: 9px;
+}
+
+.features__numbers--parking span,
+.features__numbers--coaches span {
+  padding-left: 9px;
+}
+
+.features__description--parking h3,
+.features__description--coaches h3 {
+  padding-bottom: 5px;
+}
+
+.events__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 171px 20px 60px;
+}
+
+.events__wrapper h2 {
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: #102654;
+  text-align: center;
+  padding-bottom: 52px;
+}
+
+.events__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 48.3% 1fr;
+  grid-template-columns: 48.3% 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.events__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 462px;
+}
+
+.events__info {
+  background-color: #ed0233;
+}
+
+.events__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  width: 280px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 34px 35px 0 45px;
+}
+
+.events__info-link {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.events__info-wrapper h3 {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25.2px;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 188px;
+}
+
+.events__info-wrapper span {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 109.2px;
+  color: #ffffff;
+  margin-top: -25px;
+}
+
+.events__info-wrapper p {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 43.68px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.events__poster {
+  width: 62%;
+  height: auto;
+  background: url("../../img/promo/events-desktop.png") no-repeat #102654;
+  background-position: center;
+  background-size: 100%;
+}
+
+.events__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.events__item {
+  border: 7px solid;
+  -o-border-image: -o-linear-gradient(left top, #d10a42, #00359f);
+  border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f));
+  border-image: linear-gradient(to right bottom, #d10a42, #00359f);
+  border-image-slice: 1;
+  margin-bottom: 40px;
+}
+
+.events__item-container {
+  padding: 12px 28px 29px;
+}
+
+.events__item-container h3 {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 50px;
+  color: #102654;
+  margin: 0;
+}
+
+.events__item-container p {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #102654;
+  margin: 0;
+  padding-bottom: 66px;
+}
+
+.events__item-container br {
+  display: none;
+}
+
+.events__item-container .events__info-link {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.06px;
+  letter-spacing: 0.05em;
+  color: #102654;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 .feedback__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1844,6 +2249,203 @@ template {
     background-size: cover;
   }
 
+  .features__wrapper {
+    padding-top: 100px;
+  }
+
+  .features__wrapper h2 {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 29px;
+  }
+
+  .features__list {
+    -ms-grid-columns: 1fr 0 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto 15px auto 15px auto;
+    grid-template-areas: "square parking" "machines machines" "comfort coaches";
+    padding: 0 2px;
+    row-gap: 15px;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+
+  .features__item--square .features__description {
+    padding-left: 21px;
+  }
+
+  .features__item--square::before,
+  .features__item--parking::before {
+    display: none;
+  }
+
+  .features__item--machines {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 61%;
+    margin: 28px auto 13px;
+  }
+
+  .features__item--comfort {
+    padding-left: 23px;
+  }
+
+  .features__item--square {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .features__item--parking {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .features__item--machines {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .features__item--comfort {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .features__item--coaches {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+
+  .features__numbers {
+    min-width: 97px;
+  }
+
+  .features__numbers p {
+    font-size: 58px;
+    line-height: 87px;
+    height: 69px;
+  }
+
+  .features__numbers--machines p {
+    font-size: 74px;
+    line-height: 111px;
+    padding-top: 14px;
+    padding-right: 7px;
+  }
+
+  .features__numbers--machines span {
+    font-size: 22px;
+    line-height: 33px;
+    padding-top: 25px;
+  }
+
+  .features__description {
+    padding-top: 15px;
+  }
+
+  .features__description h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .features__description--square h3 {
+    padding-bottom: 1px;
+  }
+
+  .features__description--square p {
+    padding-right: 38px;
+  }
+
+  .features__description--machines {
+    padding: 13px 26px;
+  }
+
+  .features__description--coaches {
+    padding-right: 24px;
+  }
+
+  .features__description--machines p {
+    padding: 0 20%;
+  }
+
+  .features__item--parking,
+  .features__item--coaches {
+    padding-left: 6px;
+  }
+
+  .features__description--comfort {
+    padding-bottom: 1px;
+    padding-left: 21px;
+  }
+
+  .features__description--comfort h3 {
+    padding-bottom: 2px;
+  }
+
+  .features__numbers--parking p,
+  .features__numbers--coaches p {
+    padding-right: 32px;
+  }
+
+  .features__description--parking h3,
+  .features__description--coaches h3 {
+    padding-bottom: 1px;
+  }
+
+  .events__wrapper {
+    padding: 132px 45px 60px;
+  }
+
+  .events__wrapper h2 {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 40px;
+  }
+
+  .events__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    row-gap: 30px;
+  }
+
+  .events__poster {
+    background: url("../../img/promo/events-tablet.png") no-repeat #102654;
+    background-size: 100%;
+    width: 100%;
+  }
+
+  .events__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (48%)[2];
+    grid-template-columns: repeat(2, 48%);
+    -webkit-column-gap: 27px;
+    -moz-column-gap: 27px;
+    column-gap: 27px;
+  }
+
+  .events__item {
+    margin-bottom: 20px;
+  }
+
+  .events__item:nth-child(n+2) p {
+    padding-bottom: 66px;
+  }
+
+  .events__item-container p {
+    padding-bottom: 43px;
+  }
+
+  .events__item-container br {
+    display: inline;
+  }
+
   .feedback__form-wrapper {
     width: 100%;
   }
@@ -2155,6 +2757,166 @@ template {
     background-size: 100%;
     width: 100%;
     height: 292px;
+  }
+
+  .features__wrapper {
+    padding: 67px 0 60px;
+  }
+
+  .features__wrapper h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 24px;
+  }
+
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "square" "parking" "machines" "comfort" "coaches";
+  }
+
+  .features__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 47px;
+  }
+
+  .features__item--square .features__description {
+    padding: 0;
+    padding-top: 6px;
+  }
+
+  .features__item--machines {
+    width: 72%;
+  }
+
+  .features__item--square {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .features__item--parking {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .features__item--machines {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .features__item--comfort {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+
+  .features__item--coaches {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .features__numbers {
+    padding-top: 6px;
+  }
+
+  .features__description {
+    padding: 0;
+  }
+
+  .features__description--square p {
+    padding-right: 0;
+  }
+
+  .features__description--machines p {
+    padding: 0 11%;
+  }
+
+  .features__numbers--parking p,
+  .features__numbers--coaches p {
+    padding: 0;
+  }
+
+  .events__wrapper {
+    padding: 56px 15px 60px;
+  }
+
+  .events__wrapper h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 43px;
+  }
+
+  .events__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .events__content-wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .events__info {
+    text-align: center;
+  }
+
+  .events__info-wrapper {
+    width: 100%;
+    padding: 34px 45px 45px;
+  }
+
+  .events__info-wrapper h3 {
+    padding-bottom: 31px;
+  }
+
+  .events__info-wrapper span {
+    height: 103px;
+  }
+
+  .events__poster {
+    min-height: 300px;
+    background: url("../../img/promo/events-mobile.png") no-repeat #102654;
+    background-size: 100%;
+    width: 100%;
+  }
+
+  .events__list {
+    width: 100%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+
+  .events__item {
+    text-align: center;
+    margin-bottom: 29px;
+  }
+
+  .events__item:nth-child(n+2) p {
+    padding: 0 27px 23px;
+  }
+
+  .events__item-container {
+    padding: 23px 28px 37px;
+  }
+
+  .events__item-container p {
+    padding-bottom: 23px;
   }
 
   .feedback__form-container {
