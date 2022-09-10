@@ -1,0 +1,428 @@
+.features {
+  background-color: $ghost-white;
+}
+
+.features__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 119px 20px 60px;
+
+
+  @media (max-width: $vp-1199) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    // padding-top: 67px;
+    padding: 67px 0 60px;
+  }
+}
+
+.features__wrapper h2 {
+  color: $sapphire;
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  // padding-top: 121px;
+  // padding-bottom: 64px;
+  padding-bottom: 41px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 29px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 24px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  // padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  grid-template-areas:
+    "square machines parking"
+    "comfort machines coaches";
+  // column-gap: 50px;
+  column-gap: 16px;
+  row-gap: 129px;
+  padding: 0 65px;
+
+  @media (max-width: $vp-1199) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "square parking"
+      "machines machines"
+      "comfort coaches";
+    padding: 0 2px;
+    row-gap: 15px;
+    column-gap: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "square"
+      "parking"
+      "machines"
+      "comfort"
+      "coaches";
+  }
+}
+
+.features__item {
+  display: flex;
+  justify-content: end;
+
+  @media (max-width: $vp-767) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 47px;
+  }
+}
+
+.features__item--square {
+  grid-area: square;
+  padding-left: 22px;
+  position: relative;
+}
+
+
+.features__item--square .features__description {
+  padding-left: 28px;
+
+  @media (max-width: $vp-1199) {
+    padding-left: 21px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0;
+    padding-top: 6px;
+  }
+}
+
+.features__item--parking {
+  grid-area: parking;
+  position: relative;
+}
+
+.features__item--square::before,
+.features__item--parking::before {
+  content: "";
+  position: absolute;
+  bottom: -78px;
+  left: -9px;
+  width: 347px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+
+  @media (max-width: $vp-1199) {
+    display: none;
+  }
+}
+
+.features__item--parking::before {
+  content: "";
+  position: absolute;
+  bottom: -78px;
+  left: 45px;
+  width: 347px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+}
+
+.features__item--machines {
+  grid-area: machines;
+  flex-wrap: wrap;
+  background-color: $sapphire;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  text-align: center;
+
+  @media (max-width: $vp-1199) {
+    // margin-top: 9px;
+    justify-content: center;
+    width: 61%;
+    margin: 28px auto 13px;
+  }
+
+  @media (max-width: $vp-767) {
+    // width: 100%;
+    width: 72%;
+  }
+}
+
+.features__item--comfort {
+  grid-area: comfort;
+  padding-left: 15px;
+
+  @media (max-width: $vp-1199) {
+    padding-left: 23px;
+  }
+}
+
+.features__item--coaches {
+  grid-area: coaches;
+}
+
+
+// .features__item--machines h3 {
+//   // margin: 0;
+//   // font-family: "RobotoCondensedBold", "Arial", sans-serif;
+//   // font-weight: 700;
+//   // font-size: 74px;
+//   // line-height: 111px;
+//   // color: $color-default-white;
+// }
+
+.features__numbers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  // margin-right: 15px;
+  min-width: 110px;
+
+
+  @media (max-width: $vp-1199) {
+    min-width: 97px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 6px;
+  }
+}
+
+.features__numbers p {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 106px;
+  color: transparent;
+  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+  //   background-image: linear-gradient(to right bottom, #d10a42, #0041ca);
+  background-clip: text;
+  height: 85px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 58px;
+    line-height: 87px;
+    height: 69px;
+  }
+}
+
+.features__numbers span {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $persian-blue;
+}
+
+.features__numbers--machines {
+  width: 100%;
+
+  // @media (max-width: $vp-1199) {
+  //   justify-content: center;
+  // }
+}
+
+.features__numbers--machines p {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 111px;
+  color: $color-default-white;
+  // padding-top: 17px;
+  padding-top: 35px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 74px;
+    line-height: 111px;
+    padding-top: 14px;
+    padding-right: 7px;
+  }
+}
+
+.features__numbers--machines span {
+  margin: 0;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: $color-default-white;
+  padding-top: 12px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 22px;
+    line-height: 33px;
+    padding-top: 25px;
+  }
+}
+
+.features__description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 23px;
+  // min-width: 250px;
+
+  @media (max-width: $vp-1199) {
+    padding-top: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0;
+  }
+}
+
+.features__description h3 {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: $sapphire;
+  margin: 0;
+
+  @media (max-width: $vp-1199) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.features__description--square h3 {
+  padding-bottom: 6px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 1px;
+  }
+}
+
+.features__description--square p {
+  @media (max-width: $vp-1199) {
+    padding-right: 38px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-right: 0;
+  }
+}
+
+.features__description p {
+  font-family: "RobotoCondensedLight", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: $persian-blue;
+  margin: 0;
+}
+
+.features__description--machines {
+  margin-bottom: 24px;
+  padding: 0 26px;
+
+  @media (max-width: $vp-1199) {
+    padding: 13px 26px;
+  }
+}
+
+.features__description--coaches {
+  @media (max-width: $vp-1199) {
+    padding-right: 24px;
+  }
+}
+
+.features__description--machines p {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-white;
+  margin: 0;
+
+  @media (max-width: $vp-1199) {
+    padding: 0 20%;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0 11%;
+  }
+}
+
+.features__item--parking,
+.features__item--coaches {
+  // padding-left: 11px;
+  padding-left: 36px;
+
+
+  @media (max-width: $vp-1199) {
+    padding-left: 6px;
+  }
+}
+// .features__item--machines {
+// }
+// .features__item--comfort {
+// }
+
+.features__description--comfort {
+  padding-left: 27px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 1px;
+    padding-left: 21px;
+  }
+}
+
+.features__description--comfort h3 {
+  padding-bottom: 6px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 2px;
+  }
+}
+
+// .features__description--parking {
+//   // padding-left: 27px;
+// }
+// .features__item--coaches {
+// }
+
+.features__numbers--parking p,
+.features__numbers--coaches p {
+  padding-left: 9px;
+
+  @media (max-width: $vp-1199) {
+    padding-right: 32px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0;
+  }
+}
+
+.features__numbers--parking span,
+.features__numbers--coaches span {
+  padding-left: 9px;
+}
+
+.features__description--parking h3,
+.features__description--coaches h3 {
+  padding-bottom: 5px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 1px;
+  }
+}
