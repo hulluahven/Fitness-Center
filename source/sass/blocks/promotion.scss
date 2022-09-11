@@ -1,11 +1,7 @@
-// .promotion {
-// }
 
 .promotion__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
   padding: 120px 20px 120px;
 
   @media (max-width: $vp-1199) {
@@ -13,30 +9,38 @@
   }
 
   @media (max-width: $vp-767) {
-    // flex-direction: column;
-    padding: 50px 15px 50px;
+    padding: 58px 15px 50px;
+  }
+}
+
+.promotion__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promotion__description-container {
+  background-color: $torch-red;
+  width: 43%;
+
+  @media (max-width: $vp-767) {
+    width: 100%;
   }
 }
 
 .promotion__info {
-  background-color: $torch-red;
-  // width: 500px;
-  // text-align: center;
-  padding: 60px 48px;
-  width: 344px;
-  /* text-align: center; */
-  // padding: 81px 78px;
-  // padding: 7% 7%;
+  padding: 80px 77px 85px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 
   @media (max-width: $vp-1199) {
-    width: 29%;
-    padding: 50px 48px;
+    padding: 50px 45px;
   }
 
   @media (max-width: $vp-767) {
-    // padding: 0;
-    padding: 54px 37px;
+    padding: 49px 41px 51px;
     width: 100%;
+    flex-direction: column;
   }
 }
 
@@ -53,18 +57,27 @@
   @media (max-width: $vp-1199) {
     font-size: 12px;
     line-height: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 
-  // @media (max-width: $vp-767) {
-  //   padding: 0;
-  //   width: 100%;
-  // }
+  @media (max-width: $vp-767) {
+    text-align: center;
+    padding-right: 17px;
+  }
 }
 
 .promotion__info-content {
   display: flex;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 207px;
+    margin: 0 auto;
+  }
 }
 
 .promotion__info-content h3 {
@@ -75,16 +88,14 @@
   letter-spacing: 0.03em;
   color: $color-default-white;
   margin: 0;
+  width: 254px;
 
   @media (max-width: $vp-1199) {
     font-size: 52px;
     line-height: 52px;
-    padding-right: 34px;
-  }
-
-  @media (max-width: $vp-767) {
-    // padding-right: 31px;
-    // padding-left: 7px;
+    width: 111px;
+    padding-right: 35px;
+    padding-left: 2px;
   }
 }
 
@@ -93,6 +104,7 @@
 
   @media (max-width: $vp-1199) {
     padding-right: 35px;
+    margin-top: -3px;
   }
 }
 
@@ -104,6 +116,12 @@
     "number month";
   align-items: center;
   padding-bottom: 5px;
+  box-sizing: border-box;
+
+  @media (max-width: $vp-1199) {
+    align-items: inherit;
+    padding-bottom: 0;
+  }
 }
 
 .promotion__day b {
@@ -122,6 +140,7 @@
     font-size: 12px;
     line-height: 18px;
     min-width: 42px;
+    padding-bottom: 2px;
   }
 }
 
@@ -137,6 +156,7 @@
   @media (max-width: $vp-1199) {
     font-size: 24px;
     line-height: 36px;
+    margin-top: -3px;
   }
 }
 
@@ -148,7 +168,6 @@
   color: $color-default-white;
   margin: 0;
   grid-area: month;
-
 
   @media (max-width: $vp-1199) {
     font-size: 10px;
@@ -171,12 +190,14 @@
   margin: 0;
   min-width: 88px;
   border-bottom: 1px solid $color-default-white;
+  padding-bottom: 4px;
 
 
   @media (max-width: $vp-1199) {
     min-width: 56px;
     font-size: 12px;
     line-height: 18px;
+    padding-bottom: 1px;
   }
 }
 
@@ -187,10 +208,12 @@
   line-height: 60px;
   color: $color-default-white;
   margin: 0;
+  margin-top: -6px;
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
     line-height: 36px;
+    padding-top: 2px;
   }
 }
 
@@ -205,36 +228,53 @@
   letter-spacing: 0.05em;
 
   @media (max-width: $vp-1199) {
-    width: 50%;
+    width: 52%;
     font-size: 10px;
     line-height: 12px;
-    padding: 11px 47px;
+    padding: 12px 47px;
     border: 2px solid $color-default-white;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0 auto;
   }
 }
 
 .promotion__poster {
-  // width: 55%;
-  width: 57%;
-  height: auto;
-  // height: 500px;
-  // background-color: $sapphire;
-  background: url("../../img/promo/athlet-desktop.png") no-repeat $sapphire;
-  // background-size: 93%;
-  background-position: center;
+  @media (min-width: $vp-1200) {
+    width: 57%;
+    height: auto;
+    background: url("../img/promo/athlet-desktop.png") no-repeat $sapphire center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/athlet-desktop@2x.png") no-repeat $sapphire center;
+      background-size: cover;
+    }
+  }
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
     line-height: 36px;
-    background: url("../../img/promo/athlet-tablet.png") no-repeat $sapphire center;
-    //  background-size: 100%;
+    background: url("../img/promo/athlet-tablet.png") no-repeat $sapphire center;
     background-size: cover;
+    width: 57%;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/athlet-tablet@2x.png") no-repeat $sapphire center;
+      background-size: cover;
+    }
   }
 
   @media (max-width: $vp-767) {
-    background: url("../../img/promo/athlet-mobile.png") no-repeat $sapphire;
-    background-size: 100%;
+    background: url("../img/promo/athlet-mobile.png") no-repeat $sapphire center;
+    background-size: cover;
     width: 100%;
     height: 292px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/athlet-mobile@2x.png") no-repeat $sapphire center;
+      background-size: cover;
+    }
   }
 }

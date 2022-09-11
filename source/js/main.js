@@ -21,8 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {
   if (gymButton) {
     gymButton.addEventListener('click', () => {
       createIFrame();
-      gymLink.remove();
-      gymButton.remove();
+      gymLink.classList.add('video__link--hidden');
+      // gymButton.remove();
+      gymButton.classList.add('video__button--hidden');
     });
 
     const createIFrame = () => {

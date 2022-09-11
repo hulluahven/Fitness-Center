@@ -84,6 +84,7 @@
 .features__item {
   display: flex;
   justify-content: end;
+  width: 444px;
 
   @media (max-width: $vp-767) {
     flex-wrap: wrap;
@@ -211,7 +212,7 @@
   font-size: 71px;
   line-height: 106px;
   color: transparent;
-  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+  background-image: linear-gradient(138.61deg,#d10a42 15%,#0041ca 62.58%);
   //   background-image: linear-gradient(to right bottom, #d10a42, #0041ca);
   background-clip: text;
   height: 85px;

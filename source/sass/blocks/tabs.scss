@@ -158,20 +158,23 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 55px 68px 60px;
+  padding: 55px 44px 60px;
   border: 7px solid transparent;
   position: relative;
+  min-width: 255px;
 
   @media (max-width: $vp-1199) {
-    padding: 60px 111px;
+    padding: 60px 88px;
   }
 
   @media (max-width: $vp-767) {
     padding: 44px 34px;
+    min-width: 200px;
   }
 }
 
-.tabs__content-item:hover .tabs__content-wrapper {
+.tabs__content-wrapper:hover,
+.tabs__content-wrapper:focus-within {
   border-image: $border-gradient;
   border-image-slice: 1;
 }
@@ -213,14 +216,10 @@
   padding-bottom: 35px;
   z-index: 2;
   margin-top: -98px;
-  width: 164px;
 
   @media (max-width: $vp-767) {
     font-size: 48px;
     line-height: 72px;
-  }
-
-  @media (max-width: $vp-767) {
     margin: -77px auto 0;
     padding-right: 32px;
     padding-bottom: 30px;
@@ -232,20 +231,15 @@
   background: url("../img/svg/rouble.svg") no-repeat;
   position: absolute;
   bottom: 23%;
-  right: 5%;
+  right: -5%;
   width: 39px;
   height: 71px;
   color: $sapphire;
 
-  @media (max-width: $vp-1199) {
-    bottom: 23%;
-    right: 6%;
-  }
-
   @media (max-width: $vp-767) {
     background-size: 59%;
     bottom: 10%;
-    right: 10%;
+    right: -14%;
   }
 }
 
@@ -275,8 +269,15 @@
   border: 2px solid $sapphire;
   box-sizing: border-box;
   padding: 24px 12px;
+  width: 81%;
+  margin: 0 auto;
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+  }
 }
 
+.tabs__content-link:focus,
 .tabs__content-link:hover {
   background: $button-gradient;
   border-color: transparent;

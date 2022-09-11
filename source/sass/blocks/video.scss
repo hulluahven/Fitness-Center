@@ -1,20 +1,29 @@
 .video {
   display: grid;
-  width: 31.5%;
+  width: 50%;
   position: relative;
-  height: 229px;
+  height: auto;
+  margin: -113px auto 0 17px;
+  background-color: $color-default-black;
 
 
   @media (max-width: $vp-1199) {
     padding-left: 0;
     width: 39.2%;
-    height: 167px;
+    margin: -84px auto 0;
   }
 
   @media (max-width: $vp-767) {
     width: 100%;
-    height: 191px;
+    min-height: 167px;
+    margin: 40px auto 0;
   }
+}
+
+.video__link--hidden {
+  z-index: -1;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 .video__link::after {
@@ -31,12 +40,18 @@
   position: relative;
   z-index: 0;
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 
 
   @media (max-width: $vp-1199) {
     width: 100%;
+  }
+
+  @media (max-width: $vp-767) {
+    object-fit: cover;
+    height: auto;
+    border-style: none;
   }
 }
 
@@ -62,8 +77,17 @@
   }
 
   @media (max-width: $vp-767) {
-    margin-top: -25%;
+    margin-top: -25.8%;
+    margin-left: 50.4%;
+    width: 78px;
+    height: 78px;
   }
+}
+
+.video__button--hidden {
+  z-index: -1;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 .video__button svg {
@@ -89,4 +113,9 @@
   width: 100%;
   height: 100%;
   border: none;
+  position: relative;
+  z-index: 20;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
+

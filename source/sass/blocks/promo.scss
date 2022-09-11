@@ -39,18 +39,30 @@
 }
 
 .promo__banner-container {
-  width: 500px;
-  min-height: 570px;
-  background: url("../../img/promo/promo-desktop.png") no-repeat;
-  background-size: 100%;
-  margin-right: 10.7%;
+  @media (min-width: $vp-1200) {
+    width: 500px;
+    min-height: 570px;
+    background: url("../img/promo/promo-desktop.png") no-repeat;
+    background-size: 100%;
+    margin-right: 10.7%;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/promo-desktop@2x.png") no-repeat;
+      background-size: 100%;
+    }
+  }
 
   @media (max-width: $vp-1199) {
     margin-right: 0;
     width: 473px;
-    background: url("../../img/promo/promo-tablet.png") no-repeat;
-    background-size: 93%;
+    background: url("../img/promo/promo-tablet.png") no-repeat;
+    background-size: contain;
     min-height: 390px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/promo/promo-tablet@2x.png") no-repeat;
+      background-size: contain;
+    }
   }
 
   @media (max-width: $vp-767) {
@@ -88,7 +100,7 @@
   line-height: 109px;
   grid-area: title;
   text-align: right;
-  padding: 6px 5px 0 0;
+  padding: 8px 5px 0 0;
   letter-spacing: 0.03em;
 
   @media (max-width: $vp-1199) {
@@ -141,6 +153,7 @@
 
 .promo__button {
   grid-area: button;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
   margin-left: 41.1%;
   margin-top: 57px;
   width: 53%;
