@@ -1,0 +1,47 @@
+// .coaches {
+// }
+.coaches__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 50px;
+  // padding-top: 147px;
+  padding-bottom: 38px;
+}
+
+.coaches__wrapper h2 {
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: $sapphire;
+  // text-align: center;
+  // padding-bottom: 52px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 43px;
+  }
+}
+
+.coaches__slider-container {
+  padding-top: 52px;
+}
+
+.coaches__button-back {
+  width: 10px;
+  height: 60px;
+}
+
+.coaches__button-forward {
+  width: 10px;
+  height: 60px;
+}

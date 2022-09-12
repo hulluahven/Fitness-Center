@@ -84,7 +84,7 @@
 .features__item {
   display: flex;
   justify-content: end;
-  width: 444px;
+  // width: 444px;
 
   @media (max-width: $vp-767) {
     flex-wrap: wrap;

@@ -1269,6 +1269,144 @@ template {
   letter-spacing: 0.05em;
 }
 
+.coaches__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 50px;
+  padding-bottom: 38px;
+}
+
+.coaches__wrapper h2 {
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: #102654;
+}
+
+.coaches__slider-container {
+  padding-top: 52px;
+}
+
+.coaches__button-back {
+  width: 10px;
+  height: 60px;
+}
+
+.coaches__button-forward {
+  width: 10px;
+  height: 60px;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__item {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+.slider__item h3 {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.slider__header {
+  position: relative;
+}
+
+.slider__header h3 {
+  position: absolute;
+  bottom: 26px;
+  left: 6%;
+}
+
+.slider__image {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.slider__image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.slider__info {
+  height: 294px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.slider__info-wrapper {
+  background-color: rgba(16, 38, 84, 0.89);
+  text-align: center;
+  height: 294px;
+}
+
+.workcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 262px;
+  cursor: pointer;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 59px;
+}
+
+.workcard h3 {
+  position: relative;
+  padding-top: 51px;
+}
+
+.workcard span {
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B6BDCC;
+}
+
+.workcard__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  color: #ffffff;
+  text-align: left;
+}
+
+.workcard__list span {
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
 .features {
   background-color: #f8f9fc;
 }
@@ -1315,7 +1453,6 @@ template {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
-  width: 444px;
 }
 
 .features__item--square {
@@ -2332,6 +2469,12 @@ template {
     width: 57%;
   }
 
+  .coaches__wrapper h2 {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 40px;
+  }
+
   .features__wrapper {
     padding-top: 100px;
   }
@@ -2887,6 +3030,12 @@ template {
     background-size: cover;
     width: 100%;
     height: 292px;
+  }
+
+  .coaches__wrapper h2 {
+    font-size: 32px;
+    line-height: 32px;
+    padding-bottom: 43px;
   }
 
   .features__wrapper {
