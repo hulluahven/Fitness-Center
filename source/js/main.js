@@ -1,3 +1,4 @@
+import Swiper from './vendor.js';
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 const gymVideo = document.querySelector('[data-video]');
@@ -6,6 +7,9 @@ const gymButton = document.querySelector('[data-button]');
 
 const Buttons = document.querySelectorAll('.tabs__nav-button');
 const Tabs = document.querySelectorAll('.tabs__content');
+const coachesSlider = document.querySelector('.slider');
+const buttonCoachesBack = document.querySelector('.coaches__button-back');
+const buttonCoachesNext = document.querySelector('.coaches__button-forward');
 
 // ---------------------------------
 
@@ -17,12 +21,18 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  // ---------------------------------
+
+   // ---------------------------------
+
+   new Swiper('coachesSlider')
+
+
+ // ---------------------------------
+
   if (gymButton) {
     gymButton.addEventListener('click', () => {
       createIFrame();
       gymLink.classList.add('video__link--hidden');
-      // gymButton.remove();
       gymButton.classList.add('video__button--hidden');
     });
 
