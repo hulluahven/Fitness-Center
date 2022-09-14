@@ -1,0 +1,110 @@
+.rewiews-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  min-width: 0;
+}
+
+
+.rewiews-list__item {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.rewiews-list__container {
+  background-color: $sapphire;
+  box-sizing: border-box;
+  padding: 10% 11% 10%;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10% 11% 14%;
+  }
+}
+
+.rewiews-list__image {
+  background: url("../img/review/Opinion-desktop.png") no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  margin-top: 8px;
+
+  @media (max-width: $vp-1199) {
+    background: url("../img/review/Opinion-tablet.png") no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    background: url("../img/review/Opinion-mobile.png") no-repeat;
+    background-size: cover;
+    width: 68px;
+    height: 68px;
+    margin: 18px 0 0 17px;
+  }
+}
+
+.rewiews-list__info {
+  padding: 0 0 0 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (max-width: $vp-1199) {
+    padding: 0 2px 0 31px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.rewiews-list__info b {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+
+  @media (max-width: $vp-767) {
+    line-height: 26px;
+    padding-left: 100px;
+    padding-top: 26px;
+    min-height: 50px;
+  }
+}
+
+.rewiews-list__info p {
+  margin: 0;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: $color-default-white;
+  padding-top: 12px;
+
+  @media (max-width: $vp-767) {
+    padding-top: 23px;
+    text-align: center;
+    min-height: 180px;
+  }
+}

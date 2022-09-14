@@ -1,0 +1,137 @@
+
+.rewiews__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-bottom: 121px;
+  width: 83%;
+
+  @media (max-width: $vp-767) {
+    width: 80%;
+    padding-bottom: 71px;
+  }
+}
+
+.rewiews__wrapper h2 {
+  font-family: "BebasNeueBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: $sapphire;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 53px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    padding-bottom: 41px;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+    padding-top: 18px;
+    padding-bottom: 42px;
+  }
+}
+
+.rewiews__slider-wrapper {
+  position: relative;
+  width: 49%;
+  margin: 0 auto;
+
+  @media (max-width: $vp-1199) {
+    width: 89%;
+  }
+}
+
+.rewiews__slider {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.rewiews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rewiews__button {
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  top: 40%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (max-width: $vp-767) {
+    top: 43%;
+  }
+}
+
+.rewiews__button:hover {
+  transform: scale(1.2);
+}
+
+.rewiews__button:focus {
+  transform: scale(1.2);
+}
+
+.rewiews__button::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 11px;
+  left: 4px;
+  transform: rotate(46deg);
+  border-left: 1px solid $dark-gray;
+  border-bottom: 1px solid $dark-gray;
+
+  @media (max-width: $vp-767) {
+    width: 13px;
+    height: 13px;
+    top: 14px;
+    left: 8px;
+  }
+}
+
+.rewiews__button--back {
+  position: absolute;
+  left: -60px;
+
+  @media (max-width: $vp-767) {
+    left: -39px;
+  }
+}
+
+.rewiews__button--forward {
+  position: absolute;
+  right: -60px;
+
+  @media (max-width: $vp-767) {
+    right: -39px;
+  }
+}
+
+.rewiews__button--forward::after {
+  left: -6px;
+  transform: rotate(-136deg);
+
+  @media (max-width: $vp-767) {
+    width: 13px;
+    height: 13px;
+    top: 15px;
+    left: -1px;
+  }
+}

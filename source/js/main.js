@@ -1,6 +1,6 @@
-import Swiper from './vendor.js';
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import Swiper from 'swiper';
 const gymVideo = document.querySelector('[data-video]');
 const gymLink = document.querySelector('[data-link]');
 const gymButton = document.querySelector('[data-button]');
@@ -8,11 +8,14 @@ const gymButton = document.querySelector('[data-button]');
 const Buttons = document.querySelectorAll('.tabs__nav-button');
 const Tabs = document.querySelectorAll('.tabs__content');
 const coachesSlider = document.querySelector('.slider');
-const buttonCoachesBack = document.querySelector('.coaches__button-back');
-const buttonCoachesNext = document.querySelector('.coaches__button-forward');
+const buttonCoachesBack = document.querySelector('.coaches__button--back');
+const buttonCoachesNext = document.querySelector('.coaches__button--forward');
+const rewiewsSlider = document.querySelector('.rewiews__slider');
+const buttonRewiewsBack = document.querySelector('.rewiews__button--back');
+const buttonRewiewsNext = document.querySelector('.rewiews__button--forward');
+
 
 // ---------------------------------
-
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
@@ -23,10 +26,75 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
 
    // ---------------------------------
+// eslint-disable-next-line no-undef,
 
-   new Swiper('coachesSlider')
+const onClickPrevButton = (button, swiper) => {
+  button.addEventListener('click', () => {
+    swiper.slidePrev();
+  });
+};
 
+const onClickNextButton = (button, swiper) => {
+  button.addEventListener('click', () => {
+    swiper.slideNext();
+  });
+};
 
+const coachesSwiper = new Swiper(coachesSlider, {
+  loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  navigation: {
+    nextEl: buttonCoachesNext,
+    prevEl: buttonCoachesBack,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      initialSlide: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      initialSlide: 2,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      initialSlide: 0,
+      simulateTouch: false,
+    },
+  },
+});
+
+onClickPrevButton(buttonCoachesBack, coachesSwiper);
+onClickNextButton(buttonCoachesNext, coachesSwiper);
+ // ---------------------------------
+
+ const rewiewsSwiper = new Swiper(rewiewsSlider, {
+      slidesPerView: 1,
+      // spaceBetween: 0,
+      // loop: true,
+      // initialSlide: 0,
+      // spaceBetween: 40,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      simulateTouch: false,
+      navigation: {
+        nextEl: buttonRewiewsNext,
+        prevEl: buttonRewiewsBack,
+      },
+    });
+
+    onClickPrevButton(buttonRewiewsBack, rewiewsSwiper);
+    onClickNextButton(buttonRewiewsNext, rewiewsSwiper);
  // ---------------------------------
 
   if (gymButton) {

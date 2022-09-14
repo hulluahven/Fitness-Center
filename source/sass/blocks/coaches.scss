@@ -1,11 +1,17 @@
-// .coaches {
-// }
+
 .coaches__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 50px;
-  // padding-top: 147px;
-  padding-bottom: 38px;
+  padding: 0 71px;
+  padding-bottom: 119px;
+
+  @media (max-width: $vp-1199) {
+    padding: 0 41px 82px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0 13% 38px;
+  }
 }
 
 .coaches__wrapper h2 {
@@ -16,32 +22,112 @@
   letter-spacing: 0.03em;
   margin: 0;
   color: $sapphire;
-  // text-align: center;
-  // padding-bottom: 52px;
 
   @media (max-width: $vp-1199) {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
+    text-align: center;
   }
 
   @media (max-width: $vp-767) {
     font-size: 32px;
     line-height: 32px;
-    padding-bottom: 43px;
+    padding-top: 18px;
+    padding-bottom: 38px;
   }
 }
 
 .coaches__slider-container {
-  padding-top: 52px;
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $vp-1199) {
+    width: 88%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
-.coaches__button-back {
-  width: 10px;
+.coaches__button {
+  position: absolute;
+  width: 31px;
   height: 60px;
+  top: 49%;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  @media (max-width: $vp-1199) {
+    top: 40%;
+  }
 }
 
-.coaches__button-forward {
-  width: 10px;
-  height: 60px;
+.coaches__button::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 19px;
+  left: 6px;
+  transform: rotate(46deg);
+  border-left: 1px solid $dark-gray;
+  border-bottom: 1px solid $dark-gray;
+
+  @media (max-width: $vp-767) {
+    width: 13px;
+    height: 13px;
+    top: 22px;
+    left: 4px;
+  }
+}
+
+
+.coaches__button:hover {
+  transform: scale(1.2);
+}
+
+.coaches__button:focus {
+  transform: scale(1.2);
+}
+
+.coaches__button--back {
+  left: -5%;
+
+  @media (max-width: $vp-1199) {
+    left: -6%;
+  }
+
+  @media (max-width: $vp-767) {
+    left: -12%;
+  }
+}
+
+.coaches__button--forward {
+  right: -5%;
+
+  @media (max-width: $vp-1199) {
+    right: -6%;
+  }
+
+  @media (max-width: $vp-767) {
+    right: -12%;
+  }
+}
+
+.coaches__button--forward::after {
+  transform: rotate(-136deg);
+  left: 3px;
+
+  @media (max-width: $vp-767) {
+    left: 12px;
+  }
 }
