@@ -1,22 +1,16 @@
 .workcard {
-  // background-color: rgba(16, 38, 84, 0.89);
-  // height: 100%;
-  // text-align: center;
-  // padding-top: 51px;
   display: flex;
-  // flex-wrap: wrap;
   flex-direction: column;
-  width: 262px;
-  // height: 294px;
   cursor: pointer;
   overflow: auto;
   box-sizing: border-box;
-  padding: 0 59px;
+  padding: 0 44px;
 }
 
 .workcard h3 {
   position: relative;
-  padding-top: 51px;
+  padding-top: 53px;
+  height: 23px;
 }
 
 .workcard span {
@@ -24,21 +18,23 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #B6BDCC;
+  color: $spindle;
 }
 
 .workcard__list {
   margin: 0;
-  padding: 0;
   list-style-type: disc;
-  color: #ffffff;
+  color: $color-default-white;
   text-align: left;
-  // padding: 0 59px;
+  padding: 33px 0 0 27.4px;
 }
 
+.workcard__list-item {
+  padding-bottom: 13px;
+}
 
 .workcard__list span {
   font-size: 14px;
   line-height: 21px;
-  color: #ffffff;
+  color: $color-default-white;
 }
