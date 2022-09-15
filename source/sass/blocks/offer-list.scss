@@ -22,4 +22,12 @@
   font-size: 14px;
   line-height: 21px;
   padding-right: 10px;
+
+  @media (max-width: $vp-1199) {
+    padding-right: 7px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-right: 11px;
+  }
 }

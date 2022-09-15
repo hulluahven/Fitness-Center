@@ -5,11 +5,11 @@
 .features__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 119px 20px 60px;
+  padding: 119px 20px 114px;
 
 
   @media (max-width: $vp-1199) {
-    padding-top: 100px;
+    padding: 100px 20px 92px;
   }
 
   @media (max-width: $vp-767) {
@@ -73,6 +73,7 @@
       "machines"
       "comfort"
       "coaches";
+    row-gap: 18px;
   }
 }
 
@@ -84,7 +85,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
-    padding: 0 47px;
+    padding: 0 44px;
   }
 }
 
@@ -108,6 +109,14 @@
   }
 }
 
+.features__description--square br {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: inline;
+  }
+}
+
 .features__item--parking {
   grid-area: parking;
   position: relative;
@@ -121,7 +130,7 @@
   left: -9px;
   width: 347px;
   height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
+  background-color: $underliner;
 
   @media (max-width: $vp-1199) {
     display: none;
@@ -135,7 +144,7 @@
   left: 45px;
   width: 347px;
   height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
+  background-color: $underliner;
 }
 
 .features__item--machines {
@@ -164,6 +173,10 @@
   @media (max-width: $vp-1199) {
     padding-left: 23px;
   }
+
+  @media (max-width: $vp-767) {
+    margin-top: -9px;
+  }
 }
 
 .features__item--coaches {
@@ -183,7 +196,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding-top: 6px;
+    padding-top: 4px;
   }
 }
 
@@ -194,8 +207,7 @@
   font-size: 71px;
   line-height: 106px;
   color: transparent;
-  background-image: linear-gradient(138.61deg, #d10a42 15%, #0041ca 62.58%);
-  //   background-image: linear-gradient(to right bottom, #d10a42, #0041ca);
+  background-image: $features-gradient;
   background-clip: text;
   height: 85px;
 
@@ -216,10 +228,6 @@
 
 .features__numbers--machines {
   width: 100%;
-
-  // @media (max-width: $vp-1199) {
-  //   justify-content: center;
-  // }
 }
 
 .features__numbers--machines p {
@@ -229,7 +237,6 @@
   font-size: 74px;
   line-height: 111px;
   color: $color-default-white;
-  // padding-top: 17px;
   padding-top: 35px;
 
   @media (max-width: $vp-1199) {
@@ -247,12 +254,16 @@
   font-size: 26px;
   line-height: 39px;
   color: $color-default-white;
-  padding-top: 12px;
+  padding-top: 10px;
 
   @media (max-width: $vp-1199) {
     font-size: 22px;
     line-height: 33px;
-    padding-top: 25px;
+    padding-top: 24px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 18px;
   }
 }
 
@@ -261,7 +272,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding-top: 23px;
-  // min-width: 250px;
 
   @media (max-width: $vp-1199) {
     padding-top: 15px;
@@ -320,6 +330,10 @@
   @media (max-width: $vp-1199) {
     padding: 13px 26px;
   }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 42px;
+  }
 }
 
 .features__description--coaches {
@@ -341,13 +355,12 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 11%;
+    padding: 10px 11% 0;
   }
 }
 
 .features__item--parking,
 .features__item--coaches {
-  // padding-left: 11px;
   padding-left: 36px;
 
 
@@ -355,10 +368,6 @@
     padding-left: 6px;
   }
 }
-// .features__item--machines {
-// }
-// .features__item--comfort {
-// }
 
 .features__description--comfort {
   padding-left: 27px;
@@ -366,8 +375,15 @@
   @media (max-width: $vp-1199) {
     padding-bottom: 1px;
     padding-left: 21px;
+    max-width: 300px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 100%;
+    margin: 0 auto;
   }
 }
+
 
 .features__description--comfort h3 {
   padding-bottom: 6px;
@@ -375,13 +391,12 @@
   @media (max-width: $vp-1199) {
     padding-bottom: 2px;
   }
+
+  @media (max-width: $vp-767) {
+    padding-top: 6px;
+  }
 }
 
-// .features__description--parking {
-//   // padding-left: 27px;
-// }
-// .features__item--coaches {
-// }
 
 .features__numbers--parking p,
 .features__numbers--coaches p {
@@ -399,6 +414,10 @@
 .features__numbers--parking span,
 .features__numbers--coaches span {
   padding-left: 9px;
+
+  @media (max-width: $vp-767) {
+    padding-left: 0;
+  }
 }
 
 .features__description--parking h3,
@@ -407,5 +426,9 @@
 
   @media (max-width: $vp-1199) {
     padding-bottom: 1px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 5px;
   }
 }

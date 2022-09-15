@@ -112,7 +112,7 @@
   @media (max-width: $vp-767) {
     font-size: 78px;
     line-height: 78px;
-    padding: 7px 5px 0 0;
+    padding: 9px 5px 0 0;
   }
 }
 
@@ -164,15 +164,33 @@
   @media (max-width: $vp-1199) {
     margin-left: 46.1%;
     margin-top: 41px;
-    width: 48%;
+    width: 47%;
   }
 
   @media (max-width: $vp-767) {
     margin-left: 1%;
-    margin-top: 44px;
+    margin-top: 42px;
     width: 91%;
-    padding-bottom: 22px;
+    padding-bottom: 21px;
+    padding-top: 20px;
   }
+}
+
+
+.promo__button:hover {
+  background-color: $color-default-white;
+  color: $sapphire;
+}
+
+.promo__button:focus {
+  background-color: $color-default-white;
+  color: $sapphire;
+}
+
+.promo__button:active {
+  background-color: $color-default-white;
+  color: $torch-red;
+  transform: scale(1.2);
 }
 
 .promo__social-container {

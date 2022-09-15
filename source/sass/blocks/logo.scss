@@ -38,10 +38,23 @@
   margin-left: 3px;
 
   @media (max-width: $vp-1199) {
-    margin-left: 28px;
+    margin-left: 12px;
   }
 
   @media (max-width: $vp-767) {
-    margin-left: 2px;
+    margin-left: 4px;
+    padding-top: 6px;
   }
+}
+
+.logo--footer:hover .logo__main {
+  fill: $color-neon-blue;
+}
+
+.logo--footer:focus .logo__main {
+  fill: $color-neon-blue;
+}
+
+.logo--footer:active .logo__main {
+  transform: scale(1.2);
 }

@@ -18,4 +18,20 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14.06px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-social__link:hover {
+  color: $color-neon-blue;
+}
+
+
+.header-social__link:focus {
+  color: $color-neon-blue;
+}
+
+.header-social__link:active {
+  color: $ghost-white;
+  transform: scale(1.7);
 }

@@ -23,9 +23,13 @@
 .rewiews-list__container {
   background-color: $sapphire;
   box-sizing: border-box;
-  padding: 10% 11% 10%;
+  padding: 10% 11%;
   display: grid;
   grid-template-columns: min-content 1fr;
+
+  @media (max-width: $vp-1199) {
+    padding: 9.5% 9.9% 10%;
+  }
 
   @media (max-width: $vp-767) {
     grid-template-columns: 1fr;
@@ -35,30 +39,53 @@
 }
 
 .rewiews-list__image {
-  background: url("../img/review/Opinion-desktop.png") no-repeat;
-  background-size: cover;
-  width: 80px;
-  height: 80px;
-  margin-top: 8px;
+  @media (min-width: $vp-1200) {
+    background: url("../img/review/Opinion-desktop.png") no-repeat $chamray;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    border-radius: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/review/Opinion-desktop@2x.png") no-repeat $chamray;
+      background-size: cover;
+    }
+  }
 
   @media (max-width: $vp-1199) {
-    background: url("../img/review/Opinion-tablet.png") no-repeat;
+    background: url("../img/review/Opinion-tablet.png") no-repeat $chamray;
     background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 8px 0 0 8px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/review/Opinion-tablet@2x.png") no-repeat $chamray;
+      background-size: cover;
+    }
   }
 
   @media (max-width: $vp-767) {
     grid-column: 1/2;
     grid-row: 1/1;
-    background: url("../img/review/Opinion-mobile.png") no-repeat;
+    background: url("../img/review/Opinion-mobile.png") no-repeat $chamray;
     background-size: cover;
     width: 68px;
     height: 68px;
     margin: 18px 0 0 17px;
+    border-radius: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/review/Opinion-mobile@2x.png") no-repeat $chamray;
+      background-size: cover;
+    }
   }
 }
 
 .rewiews-list__info {
-  padding: 0 0 0 25px;
+  padding: 0 0 0 27px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -106,5 +133,17 @@
     padding-top: 23px;
     text-align: center;
     min-height: 180px;
+  }
+}
+
+.rewiews-list__info br {
+  display: none;
+
+  @media (max-width: $vp-1199) {
+    display: inline;
+  }
+
+  @media (max-width: $vp-767) {
+    display: none;
   }
 }

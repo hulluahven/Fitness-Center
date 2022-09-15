@@ -1,7 +1,4 @@
 
-// .contacts {
-// }
-
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -50,4 +47,16 @@
     line-height: 20px;
     letter-spacing: 0.02em;
   }
+}
+
+.contacts__link:hover {
+  color: $sapphire;
+}
+
+.contacts__link:focus {
+  color: $sapphire;
+}
+
+.contacts__link:active {
+  transform: scale(1.2);
 }

@@ -9,18 +9,18 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  width: 111px;
-  // display: grid;
-  // grid-template-columns: repeat(3, min-content);
+  max-width: 111px;
 
 
   @media (max-width: $vp-1199) {
-    width: 128px;
-    padding-top: 3px;
+    max-width: 128px;
+    padding-top: 5px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 7px;
   }
 }
-// .social-networks__item {
-// }
 
 .social-networks__link {
   display: flex;
@@ -28,13 +28,20 @@
   width: 37px;
   height: 40px;
   align-items: center;
+
+  @media (max-width: $vp-767) {
+    width: 35px;
+  }
 }
 
-// .social-networks__link svg {
+.social-networks__link:hover {
+  transform: scale(1.2);
+}
 
-//   // width: 100%;
-// }
-// .social-networks__link--vkontakte {
-// }
-// .social-networks__link--odnoklassniki {
-// }
+.social-networks__link:focus {
+  transform: scale(1.2);
+}
+
+.social-networks__link:active {
+  transform: scale(0.7);
+}

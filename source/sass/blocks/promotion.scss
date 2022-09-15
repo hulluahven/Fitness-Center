@@ -2,14 +2,14 @@
 .promotion__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 120px 20px 120px;
+  padding: 121px 20px 118px;
 
   @media (max-width: $vp-1199) {
-    padding: 100px 43px 100px;
+    padding: 101px 45px 99px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 58px 15px 50px;
+    padding: 69px 15px 50px;
   }
 }
 
@@ -28,13 +28,13 @@
 }
 
 .promotion__info {
-  padding: 80px 77px 85px;
+  padding: 83px 77px 84px;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
 
   @media (max-width: $vp-1199) {
-    padding: 50px 45px;
+    padding: 49px 45px 51px;
   }
 
   @media (max-width: $vp-767) {
@@ -88,13 +88,17 @@
   letter-spacing: 0.03em;
   color: $color-default-white;
   margin: 0;
-  width: 254px;
+  width: 253px;
 
   @media (max-width: $vp-1199) {
     font-size: 52px;
     line-height: 52px;
     width: 111px;
     padding-right: 35px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $vp-767) {
     padding-left: 2px;
   }
 }
@@ -115,14 +119,17 @@
     "date date"
     "number month";
   align-items: center;
-  padding-bottom: 5px;
+  padding-bottom: 9px;
   box-sizing: border-box;
+  margin-top: -3px;
 
   @media (max-width: $vp-1199) {
     align-items: inherit;
     padding-bottom: 0;
+    padding-top: 3px;
   }
 }
+
 
 .promotion__day b {
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
@@ -135,6 +142,7 @@
   grid-area: date;
   min-width: 64px;
   border-bottom: 1px solid $color-default-white;
+  padding-bottom: 5px;
 
   @media (max-width: $vp-1199) {
     font-size: 12px;
@@ -150,8 +158,8 @@
   font-size: 40px;
   line-height: 60px;
   color: $color-default-white;
-  margin: 0;
   grid-area: number;
+  margin-top: -6px;
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
@@ -166,18 +174,29 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-default-white;
-  margin: 0;
   grid-area: month;
+  margin: -24px 5px 0 0;
 
   @media (max-width: $vp-1199) {
     font-size: 10px;
     line-height: 15px;
+    margin: 1px 0 0 1px;
+  }
+}
+
+.promotion__day span:nth-child(3n+1) {
+  margin: 13px 0 0 3px;
+
+  @media (max-width: $vp-1199) {
+    margin: 13px 0 0 3px;
   }
 }
 
 .promotion__time {
   text-align: left;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
 }
 
 .promotion__time b {
@@ -238,6 +257,20 @@
   @media (max-width: $vp-767) {
     margin: 0 auto;
   }
+}
+
+.promotion__link:hover {
+  background-color: $color-default-white;
+  color: $torch-red;
+}
+
+.promotion__link:focus {
+  background-color: $color-default-white;
+  color: $torch-red;
+}
+
+.promotion__link:active {
+  transform: scale(1.2);
 }
 
 .promotion__poster {

@@ -2,15 +2,26 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  overflow: auto;
   box-sizing: border-box;
   padding: 0 44px;
+
+  @media (max-width: $vp-767) {
+    padding: 0 31px;
+  }
 }
 
 .workcard h3 {
   position: relative;
   padding-top: 53px;
   height: 23px;
+
+  @media (max-width: $vp-1199) {
+    padding-top: 52px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 43px;
+  }
 }
 
 .workcard span {
@@ -27,14 +38,31 @@
   color: $color-default-white;
   text-align: left;
   padding: 33px 0 0 27.4px;
+  overflow: auto;
+  height: 150px;
+
+  @media (max-width: $vp-767) {
+    padding: 32px 0 0 18.4px;
+  }
 }
 
 .workcard__list-item {
   padding-bottom: 13px;
 }
 
-.workcard__list span {
+.workcard__list-item span {
   font-size: 14px;
   line-height: 21px;
   color: $color-default-white;
+  display: block;
+  width: 135px;
+
+  @media (max-width: $vp-1199) {
+    width: 151px;
+  }
+
+  @media (max-width: $vp-767) {
+    display: block;
+    width: 145px;
+  }
 }

@@ -497,6 +497,20 @@ template {
   margin-left: 3px;
 }
 
+.logo--footer:hover .logo__main {
+  fill: #2c39f2;
+}
+
+.logo--footer:focus .logo__main {
+  fill: #2c39f2;
+}
+
+.logo--footer:active .logo__main {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .contacts__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -527,6 +541,20 @@ template {
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.7px;
+}
+
+.contacts__link:hover {
+  color: #102654;
+}
+
+.contacts__link:focus {
+  color: #102654;
+}
+
+.contacts__link:active {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .page-main {
@@ -649,6 +677,24 @@ template {
   border: 4px solid #ffffff;
 }
 
+.promo__button:hover {
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.promo__button:focus {
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.promo__button:active {
+  background-color: #ffffff;
+  color: #ed0233;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .promo__social-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,6 +747,23 @@ template {
   font-weight: 400;
   font-size: 12px;
   line-height: 14.06px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-social__link:hover {
+  color: #2c39f2;
+}
+
+.header-social__link:focus {
+  color: #2c39f2;
+}
+
+.header-social__link:active {
+  color: #f8f9fc;
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
 }
 
 .gym__wrapper {
@@ -892,13 +955,13 @@ template {
   bottom: -80px;
   right: -63px;
   width: 350px;
-  height: 350px;
+  height: 423px;
 }
 
 .tickets__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 119px 20px 60px;
+  padding: 117px 20px 76px;
   position: relative;
   z-index: 2;
 }
@@ -913,7 +976,7 @@ template {
   text-transform: uppercase;
   margin: 0;
   text-align: center;
-  padding-bottom: 33px;
+  padding-bottom: 35px;
 }
 
 .tabs__nav {
@@ -933,7 +996,7 @@ template {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -15px;
+  bottom: -13px;
   width: 100%;
   height: 2px;
   background-color: rgba(120, 120, 120, 0.2);
@@ -959,16 +1022,36 @@ template {
   padding: 0;
 }
 
+.tabs__nav-button:hover {
+  color: #102654;
+}
+
+.tabs__nav-button:focus {
+  color: #102654;
+}
+
+.tabs__nav-button:active {
+  color: #ed0233;
+}
+
 .tabs__nav-button--active {
   color: #102654;
   position: relative;
+}
+
+.tabs__nav-button--active:hover {
+  color: #495a7d;
+}
+
+.tabs__nav-button--active:focus {
+  color: #495a7d;
 }
 
 .tabs__nav-button--active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -15px;
+  bottom: -13px;
   width: 100%;
   height: 2px;
   background-color: #d10a42;
@@ -994,6 +1077,7 @@ template {
   justify-content: center;
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 
 .tabs__content-item {
@@ -1070,7 +1154,7 @@ template {
   background: url("../img/svg/rouble.svg") no-repeat;
   position: absolute;
   bottom: 23%;
-  right: -5%;
+  right: -6%;
   width: 39px;
   height: 71px;
   color: #102654;
@@ -1097,7 +1181,7 @@ template {
   border: 2px solid #102654;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 24px 12px;
+  padding: 23px 12px;
   width: 81%;
   margin: 0 auto;
 }
@@ -1114,7 +1198,7 @@ template {
 .promotion__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 120px 20px 120px;
+  padding: 121px 20px 118px;
 }
 
 .promotion__container {
@@ -1131,7 +1215,7 @@ template {
 }
 
 .promotion__info {
-  padding: 80px 77px 85px;
+  padding: 83px 77px 84px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1167,7 +1251,7 @@ template {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin: 0;
-  width: 254px;
+  width: 253px;
 }
 
 .promotion__dates {
@@ -1185,9 +1269,10 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 5px;
+  padding-bottom: 9px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin-top: -3px;
 }
 
 .promotion__day b {
@@ -1204,6 +1289,7 @@ template {
   grid-area: date;
   min-width: 64px;
   border-bottom: 1px solid #ffffff;
+  padding-bottom: 5px;
 }
 
 .promotion__day span:nth-child(3n-1) {
@@ -1214,8 +1300,8 @@ template {
   font-size: 40px;
   line-height: 60px;
   color: #ffffff;
-  margin: 0;
   grid-area: number;
+  margin-top: -6px;
 }
 
 .promotion__day span {
@@ -1226,14 +1312,22 @@ template {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
-  margin: 0;
   grid-area: month;
+  margin: -24px 5px 0 0;
+}
+
+.promotion__day span:nth-child(3n+1) {
+  margin: 13px 0 0 3px;
 }
 
 .promotion__time {
   text-align: left;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100px;
 }
 
 .promotion__time b {
@@ -1269,6 +1363,22 @@ template {
   letter-spacing: 0.05em;
 }
 
+.promotion__link:hover {
+  background-color: #ffffff;
+  color: #ed0233;
+}
+
+.promotion__link:focus {
+  background-color: #ffffff;
+  color: #ed0233;
+}
+
+.promotion__link:active {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .coaches__wrapper {
   max-width: 1160px;
   margin: 0 auto;
@@ -1284,10 +1394,11 @@ template {
   letter-spacing: 0.03em;
   margin: 0;
   color: #102654;
+  padding-left: 2px;
 }
 
 .coaches__slider-container {
-  padding-top: 50px;
+  padding-top: 52px;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -1467,7 +1578,6 @@ template {
   -ms-flex-direction: column;
   flex-direction: column;
   cursor: pointer;
-  overflow: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 44px;
@@ -1493,16 +1603,20 @@ template {
   color: #ffffff;
   text-align: left;
   padding: 33px 0 0 27.4px;
+  overflow: auto;
+  height: 150px;
 }
 
 .workcard__list-item {
   padding-bottom: 13px;
 }
 
-.workcard__list span {
+.workcard__list-item span {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
+  display: block;
+  width: 135px;
 }
 
 .features {
@@ -1512,7 +1626,7 @@ template {
 .features__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 119px 20px 60px;
+  padding: 119px 20px 114px;
 }
 
 .features__wrapper h2 {
@@ -1563,6 +1677,10 @@ template {
 
 .features__item--square .features__description {
   padding-left: 28px;
+}
+
+.features__description--square br {
+  display: none;
 }
 
 .features__item--parking {
@@ -1675,7 +1793,7 @@ template {
   font-size: 26px;
   line-height: 39px;
   color: #ffffff;
-  padding-top: 12px;
+  padding-top: 10px;
 }
 
 .features__description {
@@ -1758,7 +1876,7 @@ template {
 .events__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 171px 20px 60px;
+  padding: 117px 20px 60px;
 }
 
 .events__wrapper h2 {
@@ -1817,8 +1935,77 @@ template {
   line-height: 16.41px;
   letter-spacing: 0.05em;
   color: #ffffff;
-  text-decoration: underline;
   text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+}
+
+.events__info-link::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 41px;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.events__info-link:hover {
+  color: #102654;
+}
+
+.events__info-link:hover::after {
+  background-color: #102654;
+}
+
+.events__info-link:focus {
+  color: #102654;
+}
+
+.events__info-link:focus::after {
+  background-color: #102654;
+}
+
+.events__info-link:active {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.events__item-container .events__info-link {
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.06px;
+  letter-spacing: 0.05em;
+  color: #102654;
+  text-transform: uppercase;
+  width: 14%;
+}
+
+.events__item-container .events__info-link::after {
+  width: 68px;
+  top: 16px;
+  left: 35px;
+  background-color: #102654;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.events__item-container .events__info-link:hover {
+  color: #ed0233;
+}
+
+.events__item-container .events__info-link:hover::after {
+  background-color: #ed0233;
 }
 
 .events__info-wrapper h3 {
@@ -1847,14 +2034,6 @@ template {
   line-height: 43.68px;
   color: #ffffff;
   margin: 0;
-}
-
-.events__poster {
-  width: 62%;
-  height: auto;
-  background: url("../../img/promo/events-desktop.png") no-repeat #102654;
-  background-position: center;
-  background-size: 100%;
 }
 
 .events__list {
@@ -1899,22 +2078,11 @@ template {
   display: none;
 }
 
-.events__item-container .events__info-link {
-  font-family: "RobotoCondensedBold", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14.06px;
-  letter-spacing: 0.05em;
-  color: #102654;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
 .rewiews__wrapper {
-  max-width: 1160px;
+  max-width: 1163px;
   margin: 0 auto;
-  padding-bottom: 121px;
-  width: 83%;
+  padding-bottom: 119px;
+  width: 86%;
 }
 
 .rewiews__wrapper h2 {
@@ -1926,14 +2094,16 @@ template {
   margin: 0;
   color: #102654;
   text-align: center;
-  padding-top: 17px;
+  padding-top: 16px;
   padding-bottom: 53px;
 }
 
 .rewiews__slider-wrapper {
   position: relative;
-  width: 49%;
+  width: 48%;
   margin: 0 auto;
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .rewiews__slider {
@@ -2040,7 +2210,7 @@ template {
   background-color: #102654;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10% 11% 10%;
+  padding: 10% 11%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: -webkit-min-content 1fr;
@@ -2049,16 +2219,8 @@ template {
   grid-template-columns: min-content 1fr;
 }
 
-.rewiews-list__image {
-  background: url("../img/review/Opinion-desktop.png") no-repeat;
-  background-size: cover;
-  width: 80px;
-  height: 80px;
-  margin-top: 8px;
-}
-
 .rewiews-list__info {
-  padding: 0 0 0 25px;
+  padding: 0 0 0 27px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2088,6 +2250,10 @@ template {
   padding-top: 12px;
 }
 
+.rewiews-list__info br {
+  display: none;
+}
+
 .feedback__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2111,8 +2277,8 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 413px;
-  padding: 61px 165px 70px 100px;
+  width: 415px;
+  padding: 61px 165px 68px 100px;
   margin: 0 0 0 auto;
 }
 
@@ -2124,7 +2290,7 @@ template {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin: 0;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
 }
 
 .feedback__form form {
@@ -2155,6 +2321,7 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .feedback__form input {
@@ -2171,6 +2338,7 @@ template {
   height: 32px;
   color: #ffffff;
   min-width: 190px;
+  padding: 0;
 }
 
 .feedback__form label {
@@ -2190,23 +2358,38 @@ template {
   text-decoration: none;
   color: #ffffff;
   background-color: transparent;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14.06px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 18px;
   cursor: pointer;
-  width: 100%;
+  width: 99%;
   margin-top: 28px;
 }
 
-.feedback__string-wrapper input::-moz-placeholder {
-  color: #ffffff;
+.feedback__form-container button:hover {
+  background-color: #ffffff;
+  color: #102654;
 }
 
-.feedback__string-wrapper textarea::-moz-placeholder {
+.feedback__form-container button:focus {
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.feedback__form-container button:active {
+  background-color: #74819c;
+  color: #102654;
+}
+
+.feedback__string-wrapper {
+  width: 100%;
+}
+
+.feedback__string-wrapper input::-moz-placeholder {
   color: #ffffff;
 }
 
@@ -2214,8 +2397,28 @@ template {
   color: #ffffff;
 }
 
-.feedback__string-wrapper textarea::-webkit-input-placeholder {
-  color: #ffffff;
+.feedback__string-wrapper input:hover::-webkit-input-placeholder {
+  color: #74819c;
+}
+
+.feedback__string-wrapper input:focus::-webkit-input-placeholder {
+  color: #74819c;
+}
+
+.feedback__string-wrapper input:hover {
+  border-bottom-color: #74819c;
+}
+
+.feedback__string-wrapper input:focus {
+  border-bottom-color: #74819c;
+}
+
+.feedback__string-wrapper input:hover::-moz-placeholder {
+  color: #74819c;
+}
+
+.feedback__string-wrapper input:focus::-moz-placeholder {
+  color: #74819c;
 }
 
 .feedback__string-wrapper--name {
@@ -2228,7 +2431,7 @@ template {
 }
 
 .feedback__contacts-container {
-  padding: 69px 103px 44px 121px;
+  padding: 69px 103px 43px 121px;
   width: 68%;
   margin: 0 auto 0 0;
 }
@@ -2300,6 +2503,18 @@ template {
   padding-bottom: 0;
 }
 
+.feedback__contacts-link:hover {
+  color: #495a7d;
+}
+
+.feedback__contacts-link:focus {
+  color: #495a7d;
+}
+
+.feedback__contacts-link:active {
+  color: #030a1a;
+}
+
 .feedback__contacts {
   padding-left: 59px;
   position: relative;
@@ -2324,42 +2539,24 @@ template {
 }
 
 .footer__container {
-  max-width: 1169px;
+  max-width: 1171px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 33px 15px 29px;
+  padding: 34px 13px 29px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.footer__nav-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80%;
-  padding: 12px 0 0 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .footer__logo {
-  grid-area: logo;
-}
-
-.footer__nav {
-  grid-area: nav;
-}
-
-.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 90%;
 }
 
 .main-nav__list {
@@ -2370,12 +2567,8 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 500px;
-  margin: 0 auto 0 33%;
-}
-
-.main-nav__item {
-  min-width: 67px;
+  margin: 0 auto;
+  padding-left: 60px;
 }
 
 .main-nav__link {
@@ -2387,6 +2580,20 @@ template {
   color: #ffffff;
   text-decoration: none;
   padding-right: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav__link:hover {
+  color: #2c39f2;
+}
+
+.main-nav__link:focus {
+  color: #2c39f2;
+}
+
+.main-nav__link:active {
+  color: #495a7d;
 }
 
 .social-networks {
@@ -2406,7 +2613,7 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 111px;
+  max-width: 111px;
 }
 
 .social-networks__link {
@@ -2421,6 +2628,24 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.social-networks__link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.social-networks__link:focus {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.social-networks__link:active {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2445,6 +2670,23 @@ template {
     background: url("../img/promo/athlet-desktop.png") no-repeat #102654 center;
     background-size: cover;
   }
+
+  .events__poster {
+    width: 62%;
+    height: auto;
+    background: url("../img/promo/events-desktop.png") no-repeat #102654;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .rewiews-list__image {
+    background: url("../img/review/Opinion-desktop.png") no-repeat #495a7d;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    border-radius: 50%;
+  }
 }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -2455,6 +2697,17 @@ template {
 
   .promotion__poster {
     background: url("../img/promo/athlet-desktop@2x.png") no-repeat #102654 center;
+    background-size: cover;
+  }
+
+  .events__poster {
+    background: url("../img/promo/events-desktop@2x.png") no-repeat #102654;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .rewiews-list__image {
+    background: url("../img/review/Opinion-desktop@2x.png") no-repeat #495a7d;
     background-size: cover;
   }
 }
@@ -2474,7 +2727,7 @@ template {
   }
 
   .logo--footer .logo__wrapper {
-    margin-left: 28px;
+    margin-left: 12px;
   }
 
   .contacts__wrapper {
@@ -2529,7 +2782,7 @@ template {
   .promo__button {
     margin-left: 46.1%;
     margin-top: 41px;
-    width: 48%;
+    width: 47%;
   }
 
   .promo__social-container {
@@ -2538,6 +2791,10 @@ template {
 
   .offer-list {
     padding-top: 96px;
+  }
+
+  .offer-list__item {
+    padding-right: 7px;
   }
 
   .gym__wrapper {
@@ -2609,13 +2866,14 @@ template {
 
   .tickets::after {
     background: url("../img/promo/disk-tablet.png") no-repeat;
-    bottom: -31px;
-    right: -2px;
+    bottom: -55px;
+    right: -3px;
+    height: 373px;
   }
 
   .tickets__wrapper {
     padding-top: 100px;
-    padding-bottom: 44px;
+    padding-bottom: 63px;
   }
 
   .tickets__wrapper h2 {
@@ -2653,7 +2911,7 @@ template {
   .tabs__content-item {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 36px;
+    margin-bottom: 37px;
   }
 
   .tabs__content-wrapper {
@@ -2661,11 +2919,11 @@ template {
   }
 
   .promotion__wrapper {
-    padding: 100px 43px 100px;
+    padding: 101px 45px 99px;
   }
 
   .promotion__info {
-    padding: 50px 45px;
+    padding: 49px 45px 51px;
   }
 
   .promotion__info p {
@@ -2683,7 +2941,7 @@ template {
     line-height: 52px;
     width: 111px;
     padding-right: 35px;
-    padding-left: 2px;
+    padding-left: 0;
   }
 
   .promotion__dates {
@@ -2696,6 +2954,7 @@ template {
     -ms-flex-align: inherit;
     align-items: inherit;
     padding-bottom: 0;
+    padding-top: 3px;
   }
 
   .promotion__day b {
@@ -2714,6 +2973,11 @@ template {
   .promotion__day span {
     font-size: 10px;
     line-height: 15px;
+    margin: 1px 0 0 1px;
+  }
+
+  .promotion__day span:nth-child(3n+1) {
+    margin: 13px 0 0 3px;
   }
 
   .promotion__time b {
@@ -2754,6 +3018,7 @@ template {
     line-height: 42px;
     padding-bottom: 24px;
     text-align: center;
+    padding-left: 0;
   }
 
   .coaches__slider-container {
@@ -2783,8 +3048,16 @@ template {
     width: 100%;
   }
 
+  .workcard h3 {
+    padding-top: 52px;
+  }
+
+  .workcard__list-item span {
+    width: 151px;
+  }
+
   .features__wrapper {
-    padding-top: 100px;
+    padding: 100px 20px 92px;
   }
 
   .features__wrapper h2 {
@@ -2873,7 +3146,7 @@ template {
   .features__numbers--machines span {
     font-size: 22px;
     line-height: 33px;
-    padding-top: 25px;
+    padding-top: 24px;
   }
 
   .features__description {
@@ -2913,6 +3186,7 @@ template {
   .features__description--comfort {
     padding-bottom: 1px;
     padding-left: 21px;
+    max-width: 300px;
   }
 
   .features__description--comfort h3 {
@@ -2930,13 +3204,13 @@ template {
   }
 
   .events__wrapper {
-    padding: 132px 45px 60px;
+    padding: 99px 45px 62px;
   }
 
   .events__wrapper h2 {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   .events__container {
@@ -2948,8 +3222,16 @@ template {
     row-gap: 30px;
   }
 
+  .events__info-wrapper {
+    width: 279px;
+  }
+
+  .events__item-container .events__info-link {
+    width: 27%;
+  }
+
   .events__poster {
-    background: url("../../img/promo/events-tablet.png") no-repeat #102654;
+    background: url("../img/promo/events-tablet.png") no-repeat #102654;
     background-size: 100%;
     width: 100%;
   }
@@ -2959,9 +3241,9 @@ template {
     display: grid;
     -ms-grid-columns: (48%)[2];
     grid-template-columns: repeat(2, 48%);
-    -webkit-column-gap: 27px;
-    -moz-column-gap: 27px;
-    column-gap: 27px;
+    -webkit-column-gap: 28px;
+    -moz-column-gap: 28px;
+    column-gap: 28px;
   }
 
   .events__item {
@@ -2980,6 +3262,11 @@ template {
     display: inline;
   }
 
+  .rewiews__wrapper {
+    padding-bottom: 100px;
+    width: 83%;
+  }
+
   .rewiews__wrapper h2 {
     font-size: 42px;
     line-height: 42px;
@@ -2991,13 +3278,25 @@ template {
     width: 89%;
   }
 
+  .rewiews-list__container {
+    padding: 9.5% 9.9% 10%;
+  }
+
   .rewiews-list__image {
-    background: url("../img/review/Opinion-tablet.png") no-repeat;
+    background: url("../img/review/Opinion-tablet.png") no-repeat #495a7d;
     background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 8px 0 0 8px;
   }
 
   .rewiews-list__info {
     padding: 0 2px 0 31px;
+  }
+
+  .rewiews-list__info br {
+    display: inline;
   }
 
   .feedback__form-wrapper {
@@ -3005,7 +3304,7 @@ template {
   }
 
   .feedback__form-container {
-    padding: 68px 165px 70px 132px;
+    padding: 69px 165px 37px 132px;
     width: 62%;
     margin: 0 auto;
   }
@@ -3013,15 +3312,24 @@ template {
   .feedback__form-wrapper h2 {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 32px;
+    padding-bottom: 31px;
+  }
+
+  .feedback__form ul {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 99%;
   }
 
   .feedback__form input {
     min-width: 206px;
+    padding: 0 0 0 2px;
   }
 
   .feedback__form-container button {
     margin-top: 27px;
+    width: 100%;
   }
 
   .feedback__string-wrapper--name {
@@ -3033,7 +3341,7 @@ template {
   }
 
   .feedback__contacts-container {
-    padding: 67px 108px 44px 128px;
+    padding: 67px 108px 41px 128px;
     width: 68%;
     margin: 0 auto;
   }
@@ -3041,7 +3349,7 @@ template {
   .feedback__contacts-wrapper h2 {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
   }
 
   .feedback__data-wrapper {
@@ -3078,25 +3386,23 @@ template {
     height: 129px;
   }
 
-  .footer__nav-wrapper {
-    padding: 14px 0 0 0;
+  .footer__container {
+    padding: 33px 31px 34px;
   }
 
   .main-nav__list {
-    margin: 0 auto 0 13.2%;
+    margin: 0 auto;
+    padding: 1px 0 0 24px;
   }
 
   .main-nav__link {
-    padding-right: 30px;
-  }
-
-  .main-nav__item:nth-child(5) .main-nav__link {
-    padding-right: 0;
+    padding-right: 21px;
+    padding-left: 9px;
   }
 
   .social-networks__list {
-    width: 128px;
-    padding-top: 3px;
+    max-width: 128px;
+    padding-top: 5px;
   }
 }
 
@@ -3109,6 +3415,23 @@ template {
   .promotion__poster {
     background: url("../img/promo/athlet-tablet@2x.png") no-repeat #102654 center;
     background-size: cover;
+  }
+
+  .events__poster {
+    background: url("../img/promo/events-tablet@2x.png") no-repeat #102654;
+    background-size: 100%;
+  }
+
+  .rewiews-list__image {
+    background: url("../img/review/Opinion-tablet@2x.png") no-repeat #495a7d;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .features__description--comfort {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -3127,7 +3450,8 @@ template {
   }
 
   .logo--footer .logo__wrapper {
-    margin-left: 2px;
+    margin-left: 4px;
+    padding-top: 6px;
   }
 
   .contacts__wrapper {
@@ -3160,7 +3484,7 @@ template {
   .promo__title-wrapper h1 {
     font-size: 78px;
     line-height: 78px;
-    padding: 7px 5px 0 0;
+    padding: 9px 5px 0 0;
   }
 
   .promo__title-wrapper span {
@@ -3174,14 +3498,19 @@ template {
 
   .promo__button {
     margin-left: 1%;
-    margin-top: 44px;
+    margin-top: 42px;
     width: 91%;
-    padding-bottom: 22px;
+    padding-bottom: 21px;
+    padding-top: 20px;
   }
 
   .offer-list {
     padding-top: 91px;
     padding-left: 0;
+  }
+
+  .offer-list__item {
+    padding-right: 11px;
   }
 
   .gym__wrapper {
@@ -3244,7 +3573,7 @@ template {
   }
 
   .tickets__wrapper {
-    padding: 69px 15px 30px;
+    padding: 69px 15px 35px;
   }
 
   .tickets__wrapper h2 {
@@ -3285,7 +3614,7 @@ template {
   }
 
   .tabs__content-item {
-    margin-bottom: 39px;
+    margin-bottom: 37px;
   }
 
   .tabs__content-wrapper {
@@ -3320,10 +3649,11 @@ template {
 
   .tabs__content-link {
     width: 100%;
+    padding: 25px 11px;
   }
 
   .promotion__wrapper {
-    padding: 58px 15px 50px;
+    padding: 69px 15px 50px;
   }
 
   .promotion__description-container {
@@ -3349,6 +3679,10 @@ template {
     margin: 0 auto;
   }
 
+  .promotion__info-content h3 {
+    padding-left: 2px;
+  }
+
   .promotion__link {
     margin: 0 auto;
   }
@@ -3361,7 +3695,7 @@ template {
   }
 
   .coaches__wrapper {
-    padding: 0 13% 38px;
+    padding: 0 13% 63px;
   }
 
   .coaches__wrapper h2 {
@@ -3400,6 +3734,23 @@ template {
     padding: 6px;
   }
 
+  .workcard {
+    padding: 0 31px;
+  }
+
+  .workcard h3 {
+    padding-top: 43px;
+  }
+
+  .workcard__list {
+    padding: 32px 0 0 18.4px;
+  }
+
+  .workcard__list-item span {
+    display: block;
+    width: 145px;
+  }
+
   .features__wrapper {
     padding: 71px 0 60px;
   }
@@ -3413,7 +3764,9 @@ template {
   .features__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto 18px auto 18px auto 18px auto 18px auto;
     grid-template-areas: "square" "parking" "machines" "comfort" "coaches";
+    row-gap: 18px;
   }
 
   .features__item {
@@ -3424,7 +3777,7 @@ template {
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    padding: 0 47px;
+    padding: 0 44px;
   }
 
   .features__item--square .features__description {
@@ -3432,8 +3785,16 @@ template {
     padding-top: 6px;
   }
 
+  .features__description--square br {
+    display: inline;
+  }
+
   .features__item--machines {
     width: 72%;
+  }
+
+  .features__item--comfort {
+    margin-top: -9px;
   }
 
   .features__item--square {
@@ -3442,29 +3803,33 @@ template {
   }
 
   .features__item--parking {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
 
   .features__item--machines {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
 
   .features__item--comfort {
-    -ms-grid-row: 4;
+    -ms-grid-row: 7;
     -ms-grid-column: 1;
   }
 
   .features__item--coaches {
-    -ms-grid-row: 5;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
   }
 
   .features__numbers {
-    padding-top: 6px;
+    padding-top: 4px;
+  }
+
+  .features__numbers--machines span {
+    padding-top: 18px;
   }
 
   .features__description {
@@ -3475,8 +3840,16 @@ template {
     padding-right: 0;
   }
 
+  .features__description--machines {
+    margin-bottom: 42px;
+  }
+
   .features__description--machines p {
-    padding: 0 11%;
+    padding: 10px 11% 0;
+  }
+
+  .features__description--comfort h3 {
+    padding-top: 6px;
   }
 
   .features__numbers--parking p,
@@ -3484,8 +3857,18 @@ template {
     padding: 0;
   }
 
+  .features__numbers--parking span,
+  .features__numbers--coaches span {
+    padding-left: 0;
+  }
+
+  .features__description--parking h3,
+  .features__description--coaches h3 {
+    padding-top: 5px;
+  }
+
   .events__wrapper {
-    padding: 56px 15px 25px;
+    padding: 71px 15px 25px;
   }
 
   .events__wrapper h2 {
@@ -3522,6 +3905,25 @@ template {
     padding: 34px 45px 45px;
   }
 
+  .events__info-link {
+    width: 100%;
+  }
+
+  .events__info-link::after {
+    top: 16px;
+    left: 50%;
+    width: 81px;
+  }
+
+  .events__item-container .events__info-link {
+    width: 100%;
+  }
+
+  .events__item-container .events__info-link::after {
+    left: 50%;
+    width: 70px;
+  }
+
   .events__info-wrapper h3 {
     padding-bottom: 31px;
   }
@@ -3532,7 +3934,7 @@ template {
 
   .events__poster {
     min-height: 300px;
-    background: url("../../img/promo/events-mobile.png") no-repeat #102654;
+    background: url("../img/promo/events-mobile.png") no-repeat #102654;
     background-size: 100%;
     width: 100%;
   }
@@ -3553,11 +3955,11 @@ template {
   }
 
   .events__item-container {
-    padding: 23px 28px 37px;
+    padding: 23px 28px 39px;
   }
 
   .events__item-container p {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
   }
 
   .rewiews__wrapper {
@@ -3568,7 +3970,7 @@ template {
   .rewiews__wrapper h2 {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-bottom: 42px;
   }
 
@@ -3612,11 +4014,12 @@ template {
     grid-column: 1/2;
     -ms-grid-row: 1;
     grid-row: 1/1;
-    background: url("../img/review/Opinion-mobile.png") no-repeat;
+    background: url("../img/review/Opinion-mobile.png") no-repeat #495a7d;
     background-size: cover;
     width: 68px;
     height: 68px;
     margin: 18px 0 0 17px;
+    border-radius: 50%;
   }
 
   .rewiews-list__info {
@@ -3649,8 +4052,12 @@ template {
     min-height: 180px;
   }
 
+  .rewiews-list__info br {
+    display: none;
+  }
+
   .feedback__form-container {
-    padding: 67px 97px 69px 13px;
+    padding: 69px 98px 67px 14px;
     width: 92%;
   }
 
@@ -3677,10 +4084,10 @@ template {
 
   .feedback__form input {
     min-width: 291px;
+    width: 100%;
   }
 
   .feedback__form-container button {
-    font-size: 14px;
     margin-top: 37px;
   }
 
@@ -3717,67 +4124,70 @@ template {
   }
 
   .footer__container {
-    padding: 33px 8px 29px;
-  }
-
-  .footer__nav-wrapper {
-    display: -ms-grid;
-    display: grid;
-    grid-auto-columns: -webkit-max-content;
-    grid-auto-columns: max-content;
-    padding: 17px 0 26px;
+    padding: 44px 11px 46px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 
   .main-nav {
-    width: 100%;
+    max-width: 290px;
+    margin-top: -21px;
   }
 
   .main-nav__list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 21px;
-    margin: 0;
-    -webkit-column-gap: 93px;
-    -moz-column-gap: 93px;
-    column-gap: 93px;
+    display: block;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 33px;
+    -moz-column-gap: 33px;
+    column-gap: 33px;
+    padding: 3px 0 0 4px;
+  }
+
+  .main-nav__item {
+    padding-bottom: 20px;
+  }
+
+  .main-nav__item--first {
+    margin: 41px 0 0 0;
   }
 
   .main-nav__link {
     padding: 0;
+    font-size: 16px;
+    line-height: 19px;
   }
 
-  .main-nav__item--abo {
-    -webkit-box-ordinal-group: 5;
-    -ms-flex-order: 4;
-    order: 4;
+  .social-networks__list {
+    padding-top: 7px;
   }
 
-  .main-nav__item--act {
-    -webkit-box-ordinal-group: 5;
-    -ms-flex-order: 4;
-    order: 4;
-  }
-
-  .main-nav__item--coach {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
-
-  .main-nav__item--list {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
-    -ms-grid-column: 2;
-    grid-column: 2/2;
+  .social-networks__link {
+    width: 35px;
   }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .promotion__poster {
     background: url("../img/promo/athlet-mobile@2x.png") no-repeat #102654 center;
+    background-size: cover;
+  }
+
+  .events__poster {
+    background: url("../img/promo/events-mobile@2x.png") no-repeat #102654;
+    background-size: 100%;
+  }
+
+  .rewiews-list__image {
+    background: url("../img/review/Opinion-mobile@2x.png") no-repeat #495a7d;
     background-size: cover;
   }
 }

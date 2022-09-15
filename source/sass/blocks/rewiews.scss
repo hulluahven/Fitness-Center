@@ -1,9 +1,14 @@
 
 .rewiews__wrapper {
-  max-width: 1160px;
+  max-width: 1163px;
   margin: 0 auto;
-  padding-bottom: 121px;
-  width: 83%;
+  padding-bottom: 119px;
+  width: 86%;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 100px;
+    width: 83%;
+  }
 
   @media (max-width: $vp-767) {
     width: 80%;
@@ -20,7 +25,7 @@
   margin: 0;
   color: $sapphire;
   text-align: center;
-  padding-top: 17px;
+  padding-top: 16px;
   padding-bottom: 53px;
 
   @media (max-width: $vp-1199) {
@@ -33,15 +38,16 @@
   @media (max-width: $vp-767) {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-bottom: 42px;
   }
 }
 
 .rewiews__slider-wrapper {
   position: relative;
-  width: 49%;
+  width: 48%;
   margin: 0 auto;
+  box-shadow: 0 0 40px $card-shadow;
 
   @media (max-width: $vp-1199) {
     width: 89%;

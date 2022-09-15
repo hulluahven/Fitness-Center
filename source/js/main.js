@@ -4,16 +4,19 @@ import Swiper from 'swiper';
 const gymVideo = document.querySelector('[data-video]');
 const gymLink = document.querySelector('[data-link]');
 const gymButton = document.querySelector('[data-button]');
-
-const Buttons = document.querySelectorAll('.tabs__nav-button');
-const Tabs = document.querySelectorAll('.tabs__content');
-const coachesSlider = document.querySelector('.slider');
-const buttonCoachesBack = document.querySelector('.coaches__button--back');
-const buttonCoachesNext = document.querySelector('.coaches__button--forward');
-const rewiewsSlider = document.querySelector('.rewiews__slider');
-const buttonRewiewsBack = document.querySelector('.rewiews__button--back');
-const buttonRewiewsNext = document.querySelector('.rewiews__button--forward');
-
+const tabSection = document.querySelector('[data-tabs]');
+const tabButtons = tabSection.querySelectorAll('[data-tab]');
+const tabCards = tabSection.querySelectorAll('[data-card]');
+const coachesSection = document.querySelector('[data-coaches]');
+const coachesSlider = coachesSection.querySelector('[data-slider]');
+const buttonCoachesBack = coachesSection.querySelector('[data-back]');
+const buttonCoachesNext = coachesSection.querySelector('[data-next]');
+const rewiewsSection = document.querySelector('[data-rewiews]');
+const rewiewsSlider = rewiewsSection.querySelector('[data-slider]');
+const buttonRewiewsBack = rewiewsSection.querySelector('[data-back]');
+const buttonRewiewsNext = rewiewsSection.querySelector('[data-next]');
+const pageForm = document.querySelector('[autocomplete="off"]');
+const userPhones = document.querySelectorAll('input[type=tel]');
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,63 +28,62 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
 
-   // ---------------------------------
-// eslint-disable-next-line no-undef,
+  // ---------------------------------
+  // eslint-disable-next-line no-undef,
 
-const onClickPrevButton = (button, swiper) => {
-  button.addEventListener('click', () => {
-    swiper.slidePrev();
-  });
-};
+  function onClickPrevButton(button, swiper) {
+    button.addEventListener('click', () => {
+      swiper.slidePrev();
+    });
+  }
 
-const onClickNextButton = (button, swiper) => {
-  button.addEventListener('click', () => {
-    swiper.slideNext();
-  });
-};
+  function onClickNextButton(button, swiper) {
+    button.addEventListener('click', () => {
+      swiper.slideNext();
+    });
+  }
 
-const coachesSwiper = new Swiper(coachesSlider, {
-  loop: true,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
+  if (coachesSlider) {
+    const coachesSwiper = new Swiper(coachesSlider, {
+      loop: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
 
-  navigation: {
-    nextEl: buttonCoachesNext,
-    prevEl: buttonCoachesBack,
-  },
+      navigation: {
+        nextEl: buttonCoachesNext,
+        prevEl: buttonCoachesBack,
+      },
 
-  breakpoints: {
-    320: {
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          initialSlide: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          initialSlide: 2,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          initialSlide: 0,
+          simulateTouch: false,
+        },
+      },
+    });
+
+    onClickPrevButton(buttonCoachesBack, coachesSwiper);
+    onClickNextButton(buttonCoachesNext, coachesSwiper);
+  }
+  // ------------Карусель---------------------
+
+  if (rewiewsSlider) {
+    const rewiewsSwiper = new Swiper(rewiewsSlider, {
       slidesPerView: 1,
-      spaceBetween: 0,
-      initialSlide: 2,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      initialSlide: 2,
-    },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      initialSlide: 0,
-      simulateTouch: false,
-    },
-  },
-});
-
-onClickPrevButton(buttonCoachesBack, coachesSwiper);
-onClickNextButton(buttonCoachesNext, coachesSwiper);
- // ---------------------------------
-
- const rewiewsSwiper = new Swiper(rewiewsSlider, {
-      slidesPerView: 1,
-      // spaceBetween: 0,
-      // loop: true,
-      // initialSlide: 0,
-      // spaceBetween: 40,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -95,7 +97,8 @@ onClickNextButton(buttonCoachesNext, coachesSwiper);
 
     onClickPrevButton(buttonRewiewsBack, rewiewsSwiper);
     onClickNextButton(buttonRewiewsNext, rewiewsSwiper);
- // ---------------------------------
+  }
+  // ---------------------------------
 
   if (gymButton) {
     gymButton.addEventListener('click', () => {
@@ -119,29 +122,103 @@ onClickNextButton(buttonCoachesNext, coachesSwiper);
   }
 
 
-  Buttons.forEach(function (item) {
-    item.addEventListener('click', () => {
-      let currentBtn = item;
-      let tabId = currentBtn.getAttribute('data-tab');
-      let currentTab = document.querySelector(tabId);
+  if (tabButtons && tabCards) {
+    tabButtons.forEach(function (item) {
+      item.addEventListener('click', () => {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute('data-tab');
+        let currentTab = document.querySelector(tabId);
 
-      if (!currentBtn.classList.contains('tabs__nav-button--active')) {
-        Buttons.forEach(function (item) {
-          item.classList.remove('tabs__nav-button--active');
-        });
+        if (!currentBtn.classList.contains('tabs__nav-button--active')) {
+          tabButtons.forEach(function (item) {
+            item.classList.remove('tabs__nav-button--active');
+          });
 
-        Tabs.forEach(function (item) {
-          item.classList.remove('tabs__content--active');
-        });
+          tabCards.forEach(function (item) {
+            item.classList.remove('tabs__content--active');
+          });
 
-        currentBtn.classList.add('tabs__nav-button--active');
-        currentTab.classList.add('tabs__content--active');
-      }
-
+          currentBtn.classList.add('tabs__nav-button--active');
+          currentTab.classList.add('tabs__content--active');
+        }
+      });
     });
-  });
+  }
 
-  // document.querySelector.(".tabs__nav-button").click();
+  // -------------------------------
+
+  let getInputNumbersValue = function (input) {
+    return input.value.replace(/\D/g, '');
+  };
+
+  if (userPhones) {
+    userPhones.forEach(function (el) {
+      el.addEventListener('input', function (e) {
+        const input = e.target;
+        const inputNumbersValue = getInputNumbersValue(input);
+
+        let formatedInputValue = ' ';
+
+        if (!inputNumbersValue) {
+          input.value = ' ';
+        }
+        if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].indexOf(inputNumbersValue[0]) > -1) {
+
+          let firstSymbols = '+7';
+
+          formatedInputValue = firstSymbols;
+
+          if (inputNumbersValue.length > 1) {
+            formatedInputValue += ' (' + inputNumbersValue.substring(1, 4);
+          }
+
+          if (inputNumbersValue.length >= 5) {
+            formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+          }
+
+          if (inputNumbersValue.length >= 8) {
+            formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
+          }
+
+          if (inputNumbersValue.length >= 10) {
+            formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
+          }
+        }
+
+        input.value = formatedInputValue;
+        return formatedInputValue;
+      });
+    });
+
+    const onNumberKeyDown = function (e) {
+      const input = e.target;
+      if (e.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+        input.value = '';
+      }
+    };
+
+    userPhones.forEach(function (el) {
+      el.addEventListener('keydown', onNumberKeyDown);
+    });
+
+    phoneChecker();
+  }
+
+  function phoneChecker() {
+    if (pageForm) {
+      pageForm.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        userPhones.forEach((phone) => {
+          const valueLength = phone.value.length;
+          if (valueLength < 16) {
+            return;
+          }
+          pageForm.submit();
+        });
+      });
+    }
+  }
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -10,7 +10,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 13% 38px;
+    padding: 0 13% 63px;
   }
 }
 
@@ -22,12 +22,14 @@
   letter-spacing: 0.03em;
   margin: 0;
   color: $sapphire;
+  padding-left: 2px;
 
   @media (max-width: $vp-1199) {
     font-size: 42px;
     line-height: 42px;
     padding-bottom: 24px;
     text-align: center;
+    padding-left: 0;
   }
 
   @media (max-width: $vp-767) {
@@ -39,7 +41,7 @@
 }
 
 .coaches__slider-container {
-  padding-top: 50px;
+  padding-top: 52px;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -69,6 +71,10 @@
   @media (max-width: $vp-1199) {
     top: 40%;
   }
+
+  // @media (max-width: $vp-767) {
+  //   top: 40%;
+  // }
 }
 
 .coaches__button::after {

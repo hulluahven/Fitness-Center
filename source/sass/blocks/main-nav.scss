@@ -1,10 +1,7 @@
 .main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-
   @media (max-width: $vp-767) {
-    width: 100%;
+    max-width: 290px;
+    margin-top: -21px;
   }
 }
 
@@ -13,24 +10,33 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 500px;
-  margin: 0 auto 0 33%;
+  margin: 0 auto;
+  padding-left: 60px;
 
   @media (max-width: $vp-1199) {
-    margin: 0 auto 0 13.2%;
+    margin: 0 auto;
+    padding: 1px 0 0 24px;
   }
 
   @media (max-width: $vp-767) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 21px;
-    margin: 0;
-    column-gap: 93px;
+    display: block;
+    column-count: 2;
+    column-gap: 33px;
+    padding: 3px 0 0 4px;
   }
 }
 
 .main-nav__item {
-  min-width: 67px;
+  @media (max-width: $vp-767) {
+    padding-bottom: 20px;
+  }
+}
+
+
+.main-nav__item--first {
+  @media (max-width: $vp-767) {
+    margin: 41px 0 0 0;
+  }
 }
 
 .main-nav__link {
@@ -42,54 +48,29 @@
   color: $color-default-white;
   text-decoration: none;
   padding-right: 40px;
+  display: inline-block;
+  vertical-align: middle;
 
   @media (max-width: $vp-1199) {
-
-    padding-right: 30px;
+    padding-right: 21px;
+    padding-left: 9px;
   }
 
   @media (max-width: $vp-767) {
     padding: 0;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
-.main-nav__item--uslu {
-  @media (max-width: $vp-767) {
-    // order: 1;
-    // padding-top: 20px;
-  }
+.main-nav__link:hover {
+  color: $color-neon-blue;
 }
 
-.main-nav__item--abo {
-  @media (max-width: $vp-767) {
-    order: 4;
-  }
+.main-nav__link:focus {
+  color: $color-neon-blue;
 }
 
-.main-nav__item--act {
-  @media (max-width: $vp-767) {
-    // order: 3;
-    order: 4;
-  }
-}
-
-.main-nav__item--coach {
-  @media (max-width: $vp-767) {
-    // order: 4;
-    order: 3;
-  }
-}
-
-.main-nav__item--list {
-  @media (max-width: $vp-767) {
-    // order: 5;
-    grid-row: 3/4;
-    grid-column: 2/2;
-  }
-}
-
-.main-nav__item:nth-child(5) .main-nav__link {
-  @media (max-width: $vp-1199) {
-    padding-right: 0;
-  }
+.main-nav__link:active {
+  color: $chamray;
 }

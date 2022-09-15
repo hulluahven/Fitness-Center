@@ -25,6 +25,9 @@ $light-slay-grey:                   #74819c;
 $persian-blue:                      #2e35ac;
 $dark-gray:                         #afafaf;
 $spindle:                           #b6bdcc;
+$underliner:                        rgba(209, 10, 66, 0.2);
+$shadow-link:                       rgba(20, 54, 122, 0.5);
+$card-shadow:                       rgba(28, 51, 116, 0.2);
 
 // Gradient
 
@@ -32,6 +35,7 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 $header-gradient:                   conic-gradient(from 130.31deg at 16.03% 46.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $button-gradient:                   linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 $border-gradient:                   linear-gradient(to right bottom, #d10a42, #00359f);
+$features-gradient:                 linear-gradient(138.61deg, #d10a42 15%, #0041ca 62.58%);
 // Typography
 // ---------------------------------
 
