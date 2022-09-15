@@ -11,7 +11,6 @@
   min-width: 0;
 }
 
-
 .rewiews-list__item {
   box-sizing: border-box;
   flex-shrink: 0;
@@ -40,7 +39,7 @@
 
 .rewiews-list__image {
   @media (min-width: $vp-1200) {
-    background: url("../img/review/Opinion-desktop.png") no-repeat $chamray;
+    background: url("../img/review/opinion-desktop.png") no-repeat $chamray;
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -48,13 +47,13 @@
     border-radius: 50%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/review/Opinion-desktop@2x.png") no-repeat $chamray;
+      background: url("../img/review/opinion-desktop@2x.png") no-repeat $chamray;
       background-size: cover;
     }
   }
 
   @media (max-width: $vp-1199) {
-    background: url("../img/review/Opinion-tablet.png") no-repeat $chamray;
+    background: url("../img/review/opinion-tablet.png") no-repeat $chamray;
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -62,7 +61,7 @@
     margin: 8px 0 0 8px;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/review/Opinion-tablet@2x.png") no-repeat $chamray;
+      background: url("../img/review/opinion-tablet@2x.png") no-repeat $chamray;
       background-size: cover;
     }
   }
@@ -70,7 +69,7 @@
   @media (max-width: $vp-767) {
     grid-column: 1/2;
     grid-row: 1/1;
-    background: url("../img/review/Opinion-mobile.png") no-repeat $chamray;
+    background: url("../img/review/opinion-mobile.png") no-repeat $chamray;
     background-size: cover;
     width: 68px;
     height: 68px;
@@ -78,7 +77,7 @@
     border-radius: 50%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/review/Opinion-mobile@2x.png") no-repeat $chamray;
+      background: url("../img/review/opinion-mobile@2x.png") no-repeat $chamray;
       background-size: cover;
     }
   }

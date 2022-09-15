@@ -71,10 +71,6 @@
   @media (max-width: $vp-1199) {
     top: 40%;
   }
-
-  // @media (max-width: $vp-767) {
-  //   top: 40%;
-  // }
 }
 
 .coaches__button::after {
@@ -95,7 +91,6 @@
     left: 4px;
   }
 }
-
 
 .coaches__button:hover {
   transform: scale(1.2);

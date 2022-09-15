@@ -2680,7 +2680,7 @@ template {
   }
 
   .rewiews-list__image {
-    background: url("../img/review/Opinion-desktop.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-desktop.png") no-repeat #495a7d;
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -2707,7 +2707,7 @@ template {
   }
 
   .rewiews-list__image {
-    background: url("../img/review/Opinion-desktop@2x.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-desktop@2x.png") no-repeat #495a7d;
     background-size: cover;
   }
 }
@@ -3283,7 +3283,7 @@ template {
   }
 
   .rewiews-list__image {
-    background: url("../img/review/Opinion-tablet.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-tablet.png") no-repeat #495a7d;
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -3423,7 +3423,7 @@ template {
   }
 
   .rewiews-list__image {
-    background: url("../img/review/Opinion-tablet@2x.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-tablet@2x.png") no-repeat #495a7d;
     background-size: cover;
   }
 }
@@ -4014,7 +4014,7 @@ template {
     grid-column: 1/2;
     -ms-grid-row: 1;
     grid-row: 1/1;
-    background: url("../img/review/Opinion-mobile.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-mobile.png") no-repeat #495a7d;
     background-size: cover;
     width: 68px;
     height: 68px;
@@ -4187,7 +4187,7 @@ template {
   }
 
   .rewiews-list__image {
-    background: url("../img/review/Opinion-mobile@2x.png") no-repeat #495a7d;
+    background: url("../img/review/opinion-mobile@2x.png") no-repeat #495a7d;
     background-size: cover;
   }
 }

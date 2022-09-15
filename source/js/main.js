@@ -130,12 +130,12 @@ window.addEventListener('DOMContentLoaded', () => {
         let currentTab = document.querySelector(tabId);
 
         if (!currentBtn.classList.contains('tabs__nav-button--active')) {
-          tabButtons.forEach(function (item) {
-            item.classList.remove('tabs__nav-button--active');
+          tabButtons.forEach(function (button) {
+            button.classList.remove('tabs__nav-button--active');
           });
 
-          tabCards.forEach(function (item) {
-            item.classList.remove('tabs__content--active');
+          tabCards.forEach(function (card) {
+            card.classList.remove('tabs__content--active');
           });
 
           currentBtn.classList.add('tabs__nav-button--active');
