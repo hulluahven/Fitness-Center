@@ -1,6 +1,10 @@
 .social-networks {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $vp-1199) {
+    max-width: 112px;
+  }
 }
 
 .social-networks__list {

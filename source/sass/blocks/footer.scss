@@ -6,16 +6,15 @@
   max-width: 1171px;
   margin: 0 auto;
   display: flex;
-  padding: 34px 13px 29px;
+  padding: 35px 13px 33px;
   justify-content: space-between;
-  align-items: center;
 
   @media (max-width: $vp-1199) {
     padding: 33px 31px 34px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 44px 11px 46px;
+    padding: 30px 11px 44px;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: stretch;

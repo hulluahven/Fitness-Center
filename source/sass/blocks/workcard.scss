@@ -1,9 +1,18 @@
 .workcard {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 0 44px;
+  // padding: 0 44px;
+  // max-width: 260px;
+  padding: 0 10%;
+  // height: auto;
+
+  @media (max-width: $vp-1199) {
+    padding: 0 40px;
+  }
 
   @media (max-width: $vp-767) {
     padding: 0 31px;
@@ -12,15 +21,17 @@
 
 .workcard h3 {
   position: relative;
-  padding-top: 53px;
-  height: 23px;
+  padding-top: 25%;
+  height: 7px;
 
   @media (max-width: $vp-1199) {
     padding-top: 52px;
+    padding-right: 10px;
   }
 
   @media (max-width: $vp-767) {
     padding-top: 43px;
+    padding-right: 1px;
   }
 }
 
@@ -30,19 +41,34 @@
   font-size: 16px;
   line-height: 24px;
   color: $spindle;
+  margin-top: -3%;
+
+  @media (max-width: $vp-1199) {
+    padding-right: 9px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-right: 0;
+  }
 }
+
 
 .workcard__list {
   margin: 0;
   list-style-type: disc;
   color: $color-default-white;
   text-align: left;
-  padding: 33px 0 0 27.4px;
+  padding: 4% 0 0 22%;
   overflow: auto;
   height: 150px;
+  box-sizing: border-box;
+
+  @media (max-width: $vp-1199) {
+    padding: 5% 0 0 16%;
+  }
 
   @media (max-width: $vp-767) {
-    padding: 32px 0 0 18.4px;
+    padding: 15px 0 0 20px;
   }
 }
 
@@ -55,10 +81,12 @@
   line-height: 21px;
   color: $color-default-white;
   display: block;
-  width: 135px;
+  width: 145px;
+  margin-top: 0;
 
   @media (max-width: $vp-1199) {
     width: 151px;
+    padding: 0;
   }
 
   @media (max-width: $vp-767) {

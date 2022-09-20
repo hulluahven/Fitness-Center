@@ -28,7 +28,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 69px 98px 67px 14px;
+    padding: 69px 98px 68px 14px;
     width: 92%;
   }
 }
@@ -212,7 +212,7 @@
   margin-right: 30px;
 
   @media (max-width: $vp-1199) {
-    margin-right: 59px;
+    margin-right: 26px;
   }
 
   @media (max-width: $vp-767) {
@@ -371,7 +371,7 @@
   top: 6px;
   left: 0;
   width: 1px;
-  height: 102px;
+  height: 75%;
   background-color: $light-slay-grey;
 
   @media (max-width: $vp-1199) {

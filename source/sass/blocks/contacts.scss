@@ -1,13 +1,23 @@
 
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
-  max-width: 500px;
+  width: 200px;
   margin-top: 24px;
   margin-bottom: 4px;
-  justify-content: end;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
 
   @media (max-width: $vp-1199) {
+    width: auto;
+    max-width: 600px;
+    position: relative;
     margin-top: 34px;
   }
 
@@ -26,7 +36,7 @@
 }
 
 .contacts__link {
-  padding: 5px 0 4px;
+  padding: 5px 10px 4px;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -35,17 +45,17 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 26px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.03em;
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
     line-height: 24px;
+    letter-spacing: 0.02em;
   }
 
   @media (max-width: $vp-767) {
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.02em;
   }
 }
 

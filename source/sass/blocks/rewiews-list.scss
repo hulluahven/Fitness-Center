@@ -19,12 +19,21 @@
   transition-property: transform;
 }
 
+.rewiews-list__wrapper {
+  padding: 35px;
+
+  @media (max-width: $vp-767) {
+    padding: 35px;
+  }
+}
+
 .rewiews-list__container {
   background-color: $sapphire;
   box-sizing: border-box;
   padding: 10% 11%;
   display: grid;
   grid-template-columns: min-content 1fr;
+  box-shadow: 0 0 35px $card-shadow;
 
   @media (max-width: $vp-1199) {
     padding: 9.5% 9.9% 10%;
@@ -129,7 +138,7 @@
   padding-top: 12px;
 
   @media (max-width: $vp-767) {
-    padding-top: 23px;
+    padding-top: 21px;
     text-align: center;
     min-height: 180px;
   }

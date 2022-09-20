@@ -5,15 +5,14 @@
 .features__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 119px 20px 114px;
-
+  padding: 118px 20px 114px;
 
   @media (max-width: $vp-1199) {
-    padding: 100px 20px 92px;
+    padding: 99px 20px 92px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 71px 0 60px;
+    padding: 69px 0 60px;
   }
 }
 
@@ -384,7 +383,6 @@
   }
 }
 
-
 .features__description--comfort h3 {
   padding-bottom: 6px;
 
@@ -396,7 +394,6 @@
     padding-top: 6px;
   }
 }
-
 
 .features__numbers--parking p,
 .features__numbers--coaches p {

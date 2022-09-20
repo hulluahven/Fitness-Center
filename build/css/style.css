@@ -467,7 +467,7 @@ template {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 1160px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -478,6 +478,7 @@ template {
 
 .logo__wrapper {
   margin-top: 30px;
+  margin-left: 8px;
 }
 
 .logo__gym {
@@ -493,8 +494,7 @@ template {
 }
 
 .logo--footer .logo__wrapper {
-  margin: 0;
-  margin-left: 3px;
+  margin: 11px 0 0 3px;
 }
 
 .logo--footer:hover .logo__main {
@@ -511,18 +511,28 @@ template {
   transform: scale(1.2);
 }
 
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 500px;
+  width: 200px;
   margin-top: 24px;
   margin-bottom: 4px;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
 }
 
 .contacts__phone {
@@ -531,7 +541,7 @@ template {
 }
 
 .contacts__link {
-  padding: 5px 0 4px;
+  padding: 5px 10px 4px;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -540,7 +550,7 @@ template {
   font-weight: 700;
   font-size: 26px;
   line-height: 26px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.03em;
 }
 
 .contacts__link:hover {
@@ -582,8 +592,6 @@ template {
 
 .promo {
   background: conic-gradient(from 130.31deg at 16.03% 46.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
-  position: relative;
-  z-index: 0;
   margin-top: -160px;
 }
 
@@ -597,7 +605,7 @@ template {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 50px;
-  padding-top: 147px;
+  padding-top: 160px;
   padding-bottom: 38px;
 }
 
@@ -860,7 +868,7 @@ template {
   background-color: #000000;
 }
 
-.video__link--hidden {
+.video__container--hidden {
   z-index: -1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -870,7 +878,7 @@ template {
   grid-row: 1/2;
 }
 
-.video__link::after {
+.video__container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1380,10 +1388,14 @@ template {
 }
 
 .coaches__wrapper {
-  max-width: 1160px;
+  max-width: 1296px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 71px;
-  padding-bottom: 119px;
+  padding: 0 36px;
+  padding-bottom: 88px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .coaches__wrapper h2 {
@@ -1394,24 +1406,24 @@ template {
   letter-spacing: 0.03em;
   margin: 0;
   color: #102654;
-  padding-left: 2px;
+  padding-left: 34px;
+  padding-bottom: 20px;
 }
 
 .coaches__slider-container {
-  padding-top: 52px;
   position: relative;
-  width: 100%;
   margin: 0 auto;
 }
 
 .coaches__button {
   position: absolute;
-  width: 31px;
+  width: 48px;
   height: 60px;
-  top: 49%;
+  top: 149px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  z-index: 10;
 }
 
 .coaches__button::after {
@@ -1441,22 +1453,21 @@ template {
 }
 
 .coaches__button--back {
-  left: -5%;
+  left: -2%;
 }
 
 .coaches__button--forward {
-  right: -5%;
+  right: -2%;
 }
 
 .coaches__button--forward::after {
   -webkit-transform: rotate(-136deg);
   -ms-transform: rotate(-136deg);
   transform: rotate(-136deg);
-  left: 3px;
+  left: 22px;
 }
 
 .slider {
-  height: auto;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -1474,35 +1485,57 @@ template {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
   width: 100%;
-  z-index: 1;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 1;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
 }
 
 .slider__item {
-  display: -ms-grid;
-  display: grid;
   width: auto;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+}
+
+.slider__item-container {
+  width: 100%;
+  padding: 32px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider__item-container:hover .slider__slide-wrapper {
+  -webkit-box-shadow: 0 0 30px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 30px rgba(28, 51, 116, 0.2);
+}
+
+.slider__slide-wrapper {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .slider__item h3 {
@@ -1570,23 +1603,20 @@ template {
 }
 
 .workcard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   cursor: pointer;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 44px;
+  padding: 0 10%;
 }
 
 .workcard h3 {
   position: relative;
-  padding-top: 53px;
-  height: 23px;
+  padding-top: 25%;
+  height: 7px;
 }
 
 .workcard span {
@@ -1595,6 +1625,7 @@ template {
   font-size: 16px;
   line-height: 24px;
   color: #b6bdcc;
+  margin-top: -3%;
 }
 
 .workcard__list {
@@ -1602,9 +1633,11 @@ template {
   list-style-type: disc;
   color: #ffffff;
   text-align: left;
-  padding: 33px 0 0 27.4px;
+  padding: 4% 0 0 22%;
   overflow: auto;
   height: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .workcard__list-item {
@@ -1616,7 +1649,8 @@ template {
   line-height: 21px;
   color: #ffffff;
   display: block;
-  width: 135px;
+  width: 145px;
+  margin-top: 0;
 }
 
 .features {
@@ -1626,7 +1660,7 @@ template {
 .features__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 119px 20px 114px;
+  padding: 118px 20px 114px;
 }
 
 .features__wrapper h2 {
@@ -1876,7 +1910,7 @@ template {
 .events__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 117px 20px 60px;
+  padding: 117px 20px 101px;
 }
 
 .events__wrapper h2 {
@@ -1905,7 +1939,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 462px;
 }
 
 .events__info {
@@ -1925,7 +1958,7 @@ template {
   width: 280px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 34px 35px 0 45px;
+  padding: 34px 35px 44px 45px;
 }
 
 .events__info-link {
@@ -2048,6 +2081,9 @@ template {
   border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f));
   border-image: linear-gradient(to right bottom, #d10a42, #00359f);
   border-image-slice: 1;
+}
+
+.events__item:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -2081,7 +2117,7 @@ template {
 .rewiews__wrapper {
   max-width: 1163px;
   margin: 0 auto;
-  padding-bottom: 119px;
+  padding-bottom: 85px;
   width: 86%;
 }
 
@@ -2095,15 +2131,13 @@ template {
   color: #102654;
   text-align: center;
   padding-top: 16px;
-  padding-bottom: 53px;
+  padding-bottom: 16px;
 }
 
 .rewiews__slider-wrapper {
   position: relative;
-  width: 48%;
+  width: 54%;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .rewiews__slider {
@@ -2127,7 +2161,7 @@ template {
   position: absolute;
   width: 25px;
   height: 50px;
-  top: 40%;
+  top: 135px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -2161,12 +2195,12 @@ template {
 
 .rewiews__button--back {
   position: absolute;
-  left: -60px;
+  left: -22px;
 }
 
 .rewiews__button--forward {
   position: absolute;
-  right: -60px;
+  right: -22px;
 }
 
 .rewiews__button--forward::after {
@@ -2206,6 +2240,10 @@ template {
   transition-property: transform, -webkit-transform;
 }
 
+.rewiews-list__wrapper {
+  padding: 35px;
+}
+
 .rewiews-list__container {
   background-color: #102654;
   -webkit-box-sizing: border-box;
@@ -2217,6 +2255,8 @@ template {
   -ms-grid-columns: min-content 1fr;
   grid-template-columns: -webkit-min-content 1fr;
   grid-template-columns: min-content 1fr;
+  -webkit-box-shadow: 0 0 35px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 35px rgba(28, 51, 116, 0.2);
 }
 
 .rewiews-list__info {
@@ -2526,7 +2566,7 @@ template {
   top: 6px;
   left: 0;
   width: 1px;
-  height: 102px;
+  height: 75%;
   background-color: #74819c;
 }
 
@@ -2544,19 +2584,20 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 34px 13px 29px;
+  padding: 35px 13px 33px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .footer__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main-nav {
+  max-width: 529px;
 }
 
 .main-nav__list {
@@ -2568,7 +2609,16 @@ template {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-left: 60px;
+  padding-left: 19px;
+  padding-top: 10px;
+}
+
+.main-nav__item {
+  margin-right: 40px;
+}
+
+.main-nav__item:last-child {
+  margin-right: 0;
 }
 
 .main-nav__link {
@@ -2579,9 +2629,10 @@ template {
   line-height: 16.41px;
   color: #ffffff;
   text-decoration: none;
-  padding-right: 40px;
+  padding: 0;
   display: inline-block;
   vertical-align: middle;
+  margin: 0;
 }
 
 .main-nav__link:hover {
@@ -2675,8 +2726,8 @@ template {
     width: 62%;
     height: auto;
     background: url("../img/promo/events-desktop.png") no-repeat #102654;
-    background-position: center;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
   }
 
   .rewiews-list__image {
@@ -2702,8 +2753,8 @@ template {
 
   .events__poster {
     background: url("../img/promo/events-desktop@2x.png") no-repeat #102654;
-    background-position: center;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
   }
 
   .rewiews-list__image {
@@ -2714,11 +2765,12 @@ template {
 
 @media (max-width: 1199px) {
   .page-header__container {
-    padding: 0 43px;
+    padding: 0 35px;
   }
 
   .logo__wrapper {
     margin-top: 41px;
+    margin-left: 8px;
   }
 
   .logo__main {
@@ -2727,10 +2779,13 @@ template {
   }
 
   .logo--footer .logo__wrapper {
-    margin-left: 12px;
+    margin: 14px 0 0 12px;
   }
 
   .contacts__wrapper {
+    width: auto;
+    max-width: 600px;
+    position: relative;
     margin-top: 34px;
   }
 
@@ -2741,6 +2796,7 @@ template {
   .contacts__link {
     font-size: 24px;
     line-height: 24px;
+    letter-spacing: 0.02em;
   }
 
   .promo__wrapper {
@@ -3010,7 +3066,7 @@ template {
   }
 
   .coaches__wrapper {
-    padding: 0 41px 82px;
+    padding: 0 43px 83px;
   }
 
   .coaches__wrapper h2 {
@@ -3025,39 +3081,63 @@ template {
     width: 88%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 16px;
   }
 
   .coaches__button {
-    top: 40%;
+    top: 41%;
+    width: 31px;
   }
 
   .coaches__button--back {
-    left: -6%;
+    left: -7%;
   }
 
   .coaches__button--forward {
-    right: -6%;
+    right: -6.5%;
   }
 
-  .slider__item {
-    padding: 2px;
+  .slider__item-container {
+    padding: 17px;
+  }
+
+  .slider__item-container:hover .slider__slide-wrapper {
+    -webkit-box-shadow: 0 0 17px rgba(28, 51, 116, 0.2);
+    box-shadow: 0 0 17px rgba(28, 51, 116, 0.2);
+  }
+
+  .slider__header h3 {
+    left: 52%;
+    bottom: 9px;
   }
 
   .slider__image img {
     width: 100%;
   }
 
+  .workcard {
+    padding: 0 40px;
+  }
+
   .workcard h3 {
     padding-top: 52px;
+    padding-right: 10px;
+  }
+
+  .workcard span {
+    padding-right: 9px;
+  }
+
+  .workcard__list {
+    padding: 5% 0 0 16%;
   }
 
   .workcard__list-item span {
     width: 151px;
+    padding: 0;
   }
 
   .features__wrapper {
-    padding: 100px 20px 92px;
+    padding: 99px 20px 92px;
   }
 
   .features__wrapper h2 {
@@ -3210,7 +3290,7 @@ template {
   .events__wrapper h2 {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 41px;
+    padding-bottom: 42px;
   }
 
   .events__container {
@@ -3219,7 +3299,7 @@ template {
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;
-    row-gap: 30px;
+    row-gap: 31px;
   }
 
   .events__info-wrapper {
@@ -3232,7 +3312,8 @@ template {
 
   .events__poster {
     background: url("../img/promo/events-tablet.png") no-repeat #102654;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
     width: 100%;
   }
 
@@ -3250,6 +3331,10 @@ template {
     margin-bottom: 20px;
   }
 
+  .events__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   .events__item:nth-child(n+2) p {
     padding-bottom: 66px;
   }
@@ -3263,14 +3348,14 @@ template {
   }
 
   .rewiews__wrapper {
-    padding-bottom: 100px;
+    padding-bottom: 65px;
     width: 83%;
   }
 
   .rewiews__wrapper h2 {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 41px;
+    padding-bottom: 6px;
     text-align: center;
   }
 
@@ -3333,7 +3418,7 @@ template {
   }
 
   .feedback__string-wrapper--name {
-    margin-right: 59px;
+    margin-right: 26px;
   }
 
   .feedback__contacts-wrapper {
@@ -3390,14 +3475,22 @@ template {
     padding: 33px 31px 34px;
   }
 
-  .main-nav__list {
-    margin: 0 auto;
-    padding: 1px 0 0 24px;
+  .main-nav {
+    max-width: 450px;
   }
 
-  .main-nav__link {
-    padding-right: 21px;
-    padding-left: 9px;
+  .main-nav__list {
+    margin: 0 auto;
+    padding: 15px 0 0 6px;
+  }
+
+  .main-nav__item {
+    margin-right: 21px;
+    margin-left: 9px;
+  }
+
+  .social-networks {
+    max-width: 112px;
   }
 
   .social-networks__list {
@@ -3419,7 +3512,8 @@ template {
 
   .events__poster {
     background: url("../img/promo/events-tablet@2x.png") no-repeat #102654;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
   }
 
   .rewiews-list__image {
@@ -3433,15 +3527,20 @@ template {
     width: 100%;
     margin: 0 auto;
   }
+
+  .rewiews__slider-wrapper {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
   .page-header__container {
-    padding: 0 15px;
+    padding: 0 6px;
   }
 
   .logo__wrapper {
     margin-top: 21px;
+    margin-left: 9px;
   }
 
   .logo__main {
@@ -3461,7 +3560,10 @@ template {
   .contacts__link {
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.02em;
+  }
+
+  .promo {
+    margin-top: -226px;
   }
 
   .promo__wrapper {
@@ -3469,7 +3571,7 @@ template {
   }
 
   .promo__title-container {
-    padding-top: 51px;
+    padding-top: 117px;
   }
 
   .promo__banner-container {
@@ -3653,7 +3755,7 @@ template {
   }
 
   .promotion__wrapper {
-    padding: 69px 15px 50px;
+    padding: 69px 15px 33px;
   }
 
   .promotion__description-container {
@@ -3695,14 +3797,14 @@ template {
   }
 
   .coaches__wrapper {
-    padding: 0 13% 63px;
+    padding: 0 7.3% 46px;
   }
 
   .coaches__wrapper h2 {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 18px;
-    padding-bottom: 38px;
+    padding-top: 36px;
+    padding-bottom: 20px;
   }
 
   .coaches__slider-container {
@@ -3719,11 +3821,11 @@ template {
   }
 
   .coaches__button--back {
-    left: -12%;
+    left: -3%;
   }
 
   .coaches__button--forward {
-    right: -12%;
+    right: -3%;
   }
 
   .coaches__button--forward::after {
@@ -3734,16 +3836,30 @@ template {
     padding: 6px;
   }
 
+  .slider__item-container {
+    padding: 17px;
+  }
+
+  .slider__item-container:hover .slider__slide-wrapper {
+    -webkit-box-shadow: 0 0 17px rgba(28, 51, 116, 0.2);
+    box-shadow: 0 0 17px rgba(28, 51, 116, 0.2);
+  }
+
   .workcard {
     padding: 0 31px;
   }
 
   .workcard h3 {
     padding-top: 43px;
+    padding-right: 1px;
+  }
+
+  .workcard span {
+    padding-right: 0;
   }
 
   .workcard__list {
-    padding: 32px 0 0 18.4px;
+    padding: 15px 0 0 20px;
   }
 
   .workcard__list-item span {
@@ -3752,7 +3868,7 @@ template {
   }
 
   .features__wrapper {
-    padding: 71px 0 60px;
+    padding: 69px 0 60px;
   }
 
   .features__wrapper h2 {
@@ -3883,6 +3999,7 @@ template {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    row-gap: 29px;
   }
 
   .events__content-wrapper {
@@ -3893,7 +4010,6 @@ template {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
-    height: auto;
   }
 
   .events__info {
@@ -3935,7 +4051,8 @@ template {
   .events__poster {
     min-height: 300px;
     background: url("../img/promo/events-mobile.png") no-repeat #102654;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
     width: 100%;
   }
 
@@ -3947,7 +4064,10 @@ template {
 
   .events__item {
     text-align: center;
-    margin-bottom: 29px;
+  }
+
+  .events__item:not(:last-child) {
+    margin-bottom: 31px;
   }
 
   .events__item:nth-child(n+2) p {
@@ -3963,19 +4083,20 @@ template {
   }
 
   .rewiews__wrapper {
-    width: 80%;
-    padding-bottom: 71px;
+    width: 92%;
+    padding-bottom: 36px;
   }
 
   .rewiews__wrapper h2 {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 15px;
-    padding-bottom: 42px;
+    padding-top: 24px;
+    padding-bottom: 8px;
   }
 
   .rewiews__button {
-    top: 43%;
+    top: 181px;
+    z-index: 10;
   }
 
   .rewiews__button::after {
@@ -3986,11 +4107,11 @@ template {
   }
 
   .rewiews__button--back {
-    left: -39px;
+    left: -3px;
   }
 
   .rewiews__button--forward {
-    right: -39px;
+    right: -7px;
   }
 
   .rewiews__button--forward::after {
@@ -3998,6 +4119,10 @@ template {
     height: 13px;
     top: 15px;
     left: -1px;
+  }
+
+  .rewiews-list__wrapper {
+    padding: 35px;
   }
 
   .rewiews-list__container {
@@ -4047,7 +4172,7 @@ template {
   }
 
   .rewiews-list__info p {
-    padding-top: 23px;
+    padding-top: 21px;
     text-align: center;
     min-height: 180px;
   }
@@ -4057,7 +4182,7 @@ template {
   }
 
   .feedback__form-container {
-    padding: 69px 98px 67px 14px;
+    padding: 69px 98px 68px 14px;
     width: 92%;
   }
 
@@ -4124,7 +4249,7 @@ template {
   }
 
   .footer__container {
-    padding: 44px 11px 46px;
+    padding: 30px 11px 44px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -4153,6 +4278,7 @@ template {
   }
 
   .main-nav__item {
+    margin: 0;
     padding-bottom: 20px;
   }
 
@@ -4161,7 +4287,6 @@ template {
   }
 
   .main-nav__link {
-    padding: 0;
     font-size: 16px;
     line-height: 19px;
   }
@@ -4183,7 +4308,8 @@ template {
 
   .events__poster {
     background: url("../img/promo/events-mobile@2x.png") no-repeat #102654;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
   }
 
   .rewiews-list__image {

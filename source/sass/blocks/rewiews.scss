@@ -2,17 +2,17 @@
 .rewiews__wrapper {
   max-width: 1163px;
   margin: 0 auto;
-  padding-bottom: 119px;
+  padding-bottom: 85px;
   width: 86%;
 
   @media (max-width: $vp-1199) {
-    padding-bottom: 100px;
+    padding-bottom: 65px;
     width: 83%;
   }
 
   @media (max-width: $vp-767) {
-    width: 80%;
-    padding-bottom: 71px;
+    width: 92%;
+    padding-bottom: 36px;
   }
 }
 
@@ -26,31 +26,34 @@
   color: $sapphire;
   text-align: center;
   padding-top: 16px;
-  padding-bottom: 53px;
+  padding-bottom: 16px;
 
   @media (max-width: $vp-1199) {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 41px;
+    padding-bottom: 6px;
     text-align: center;
   }
 
   @media (max-width: $vp-767) {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 15px;
-    padding-bottom: 42px;
+    padding-top: 24px;
+    padding-bottom: 8px;
   }
 }
 
 .rewiews__slider-wrapper {
   position: relative;
-  width: 48%;
+  width: 54%;
   margin: 0 auto;
-  box-shadow: 0 0 40px $card-shadow;
 
   @media (max-width: $vp-1199) {
     width: 89%;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 100%;
   }
 }
 
@@ -75,13 +78,14 @@
   position: absolute;
   width: 25px;
   height: 50px;
-  top: 40%;
+  top: 135px;
   cursor: pointer;
   border: none;
   background-color: transparent;
 
   @media (max-width: $vp-767) {
-    top: 43%;
+    top: 181px;
+    z-index: 10;
   }
 }
 
@@ -114,19 +118,19 @@
 
 .rewiews__button--back {
   position: absolute;
-  left: -60px;
+  left: -22px;
 
   @media (max-width: $vp-767) {
-    left: -39px;
+    left: -3px;
   }
 }
 
 .rewiews__button--forward {
   position: absolute;
-  right: -60px;
+  right: -22px;
 
   @media (max-width: $vp-767) {
-    right: -39px;
+    right: -7px;
   }
 }
 

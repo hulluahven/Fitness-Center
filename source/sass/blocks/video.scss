@@ -20,13 +20,13 @@
   }
 }
 
-.video__link--hidden {
+.video__container--hidden {
   z-index: -1;
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
-.video__link::after {
+.video__container::after {
   content: "";
   position: absolute;
   top: 0;

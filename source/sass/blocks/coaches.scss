@@ -1,16 +1,19 @@
 
 .coaches__wrapper {
-  max-width: 1160px;
+  max-width: 1296px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 71px;
-  padding-bottom: 119px;
+  padding: 0 36px;
+  padding-bottom: 88px;
+  position: relative;
+  box-sizing: border-box;
 
   @media (max-width: $vp-1199) {
-    padding: 0 41px 82px;
+    padding: 0 43px 83px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 13% 63px;
+    padding: 0 7.3% 46px;
   }
 }
 
@@ -22,7 +25,8 @@
   letter-spacing: 0.03em;
   margin: 0;
   color: $sapphire;
-  padding-left: 2px;
+  padding-left: 34px;
+  padding-bottom: 20px;
 
   @media (max-width: $vp-1199) {
     font-size: 42px;
@@ -35,21 +39,18 @@
   @media (max-width: $vp-767) {
     font-size: 32px;
     line-height: 32px;
-    padding-top: 18px;
-    padding-bottom: 38px;
+    padding-top: 36px;
+    padding-bottom: 20px;
   }
 }
 
 .coaches__slider-container {
-  padding-top: 52px;
   position: relative;
-  width: 100%;
   margin: 0 auto;
 
   @media (max-width: $vp-1199) {
     width: 88%;
     box-sizing: border-box;
-    padding: 16px;
   }
 
   @media (max-width: $vp-767) {
@@ -61,15 +62,17 @@
 
 .coaches__button {
   position: absolute;
-  width: 31px;
+  width: 48px;
   height: 60px;
-  top: 49%;
+  top: 149px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  z-index: 10;
 
   @media (max-width: $vp-1199) {
-    top: 40%;
+    top: 41%;
+    width: 31px;
   }
 }
 
@@ -101,32 +104,32 @@
 }
 
 .coaches__button--back {
-  left: -5%;
+  left: -2%;
 
   @media (max-width: $vp-1199) {
-    left: -6%;
+    left: -7%;
   }
 
   @media (max-width: $vp-767) {
-    left: -12%;
+    left: -3%;
   }
 }
 
 .coaches__button--forward {
-  right: -5%;
+  right: -2%;
 
   @media (max-width: $vp-1199) {
-    right: -6%;
+    right: -6.5%;
   }
 
   @media (max-width: $vp-767) {
-    right: -12%;
+    right: -3%;
   }
 }
 
 .coaches__button--forward::after {
   transform: rotate(-136deg);
-  left: 3px;
+  left: 22px;
 
   @media (max-width: $vp-767) {
     left: 12px;

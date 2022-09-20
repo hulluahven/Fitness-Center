@@ -1,8 +1,10 @@
 .promo {
   background: $header-gradient;
-  position: relative;
-  z-index: 0;
   margin-top: -160px;
+
+  @media (max-width: $vp-767) {
+    margin-top: -226px;
+  }
 }
 
 .promo__wrapper {
@@ -11,7 +13,7 @@
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 50px;
-  padding-top: 147px;
+  padding-top: 160px;
   padding-bottom: 38px;
 
   @media (max-width: $vp-1199) {
@@ -34,7 +36,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding-top: 51px;
+    padding-top: 117px;
   }
 }
 

@@ -1,7 +1,7 @@
 .events__wrapper {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 117px 20px 60px;
+  padding: 117px 20px 101px;
 
   @media (max-width: $vp-1199) {
     padding: 99px 45px 62px;
@@ -26,7 +26,7 @@
   @media (max-width: $vp-1199) {
     font-size: 42px;
     line-height: 42px;
-    padding-bottom: 41px;
+    padding-bottom: 42px;
   }
 
   @media (max-width: $vp-767) {
@@ -44,24 +44,23 @@
   @media (max-width: $vp-1199) {
     grid-template-columns: 1fr;
     column-gap: 0;
-    row-gap: 30px;
+    row-gap: 31px;
   }
 
   @media (max-width: $vp-767) {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 29px;
   }
 }
 
 .events__content-wrapper {
   display: flex;
-  height: 462px;
 
   @media (max-width: $vp-767) {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    height: auto;
   }
 }
 
@@ -79,7 +78,7 @@
   flex-direction: column-reverse;
   width: 280px;
   box-sizing: border-box;
-  padding: 34px 35px 0 45px;
+  padding: 34px 35px 44px 45px;
 
   @media (max-width: $vp-1199) {
     width: 279px;
@@ -230,36 +229,40 @@
     width: 62%;
     height: auto;
     background: url("../img/promo/events-desktop.png") no-repeat $sapphire;
-    background-position: center;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/promo/events-desktop@2x.png") no-repeat $sapphire;
-      background-position: center;
-      background-size: 100%;
+      background-position: top;
+      background-size: cover;
     }
   }
 
   @media (max-width: $vp-1199) {
     background: url("../img/promo/events-tablet.png") no-repeat $sapphire;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
     width: 100%;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/promo/events-tablet@2x.png") no-repeat $sapphire;
-      background-size: 100%;
+      background-position: top;
+      background-size: cover;
     }
   }
 
   @media (max-width: $vp-767) {
     min-height: 300px;
     background: url("../img/promo/events-mobile.png") no-repeat $sapphire;
-    background-size: 100%;
+    background-position: top;
+    background-size: cover;
     width: 100%;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/promo/events-mobile@2x.png") no-repeat $sapphire;
-      background-size: 100%;
+      background-position: top;
+      background-size: cover;
     }
   }
 }
@@ -285,7 +288,6 @@
   border: 7px solid;
   border-image: $border-gradient;
   border-image-slice: 1;
-  margin-bottom: 40px;
 
   @media (max-width: $vp-1199) {
     margin-bottom: 20px;
@@ -293,7 +295,18 @@
 
   @media (max-width: $vp-767) {
     text-align: center;
-    margin-bottom: 29px;
+  }
+}
+
+.events__item:not(:last-child) {
+  margin-bottom: 40px;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 31px;
   }
 }
 
@@ -306,6 +319,10 @@
     padding: 0 27px 23px;
   }
 }
+
+// .events__item:nth-last-child(2n+1) {
+//   margin-bottom: 0;
+// }
 
 .events__item-container {
   padding: 12px 28px 29px;

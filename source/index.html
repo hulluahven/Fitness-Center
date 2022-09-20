@@ -22,7 +22,7 @@
     <div class="page__body-wrapper">
       <header class="page-header" data-header>
         <div class="page-header__container">
-          <a class="page-header__logo logo logo--header" href="#">Логотип
+          <a class="page-header__logo logo logo--header">Логотип
             <div class="logo__wrapper">
               <svg class="logo__gym" width="89" height="20">
                 <symbol viewBox="0 0 87 20" id="logo-text">
@@ -104,7 +104,7 @@
               </picture>
             </div>
             <div class="gym__video video" data-video>
-                <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" data-link>
+                <div class="video__container" data-container>
                   <picture>
                     <!-- 1х: 320px; 2x: 640px -->
                     <source type="image/webp" media="(min-width:320px) and (max-width:767px)" srcset="img/gym/cover-mobile.webp 1x, img/gym/cover-mobile.webp 2x">
@@ -115,7 +115,7 @@
                     <!-- 1х: 364px; 2x: 728px -->
                     <img src="img/gym/cover-desktop.jpg" width="364" height="228" srcset="img/gym/cover-desktop@2x.jpg 2x" alt="Видео">
                   </picture>
-                </a>
+                </div>
                 <button class="video__button" aria-label="Воспроизвести видео" data-button>
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear_4911_25)" stroke-opacity="0.2" stroke-width="2"/>
@@ -287,233 +287,265 @@
                 <ul class="swiper-wrapper slider__list">
                   <!-- 1 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Анна Павлова</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pavlova-mobile.webp 1x, img/stuff/pavlova-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pavlova-tablet.webp 1x, img/stuff/pavlova-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/pavlova-desktop.webp 1x, img/stuff/pavlova-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/pavlova-desktop.jpg" width="260" height="294" srcset="img/stuff/pavlova-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Анна Павлова</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pavlova-mobile.webp 1x, img/stuff/pavlova-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pavlova-tablet.webp 1x, img/stuff/pavlova-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/pavlova-desktop.webp 1x, img/stuff/pavlova-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/pavlova-desktop.jpg" width="260" height="294" srcset="img/stuff/pavlova-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Анна Павлова</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 2 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Алексей Лавров</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/lavrov-mobile.webp 1x, img/stuff/lavrov-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/lavrov-tablet.webp 1x, img/stuff/lavrov-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/lavrov-desktop.webp 1x, img/stuff/lavrov-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/lavrov-desktop.jpg" width="260" height="294" srcset="img/stuff/lavrov-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Алексей Лавров</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/lavrov-mobile.webp 1x, img/stuff/lavrov-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/lavrov-tablet.webp 1x, img/stuff/lavrov-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/lavrov-desktop.webp 1x, img/stuff/lavrov-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/lavrov-desktop.jpg" width="260" height="294" srcset="img/stuff/lavrov-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Алексей Лавров</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 3 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Александр Пашков</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pashkov-mobile.webp 1x, img/stuff/pashkov-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pashkov-tablet.webp 1x, img/stuff/pashkov-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/pashkov-desktop.webp 1x, img/stuff/pashkov-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/pashkov-desktop.jpg" width="260" height="294" srcset="img/stuff/pashkov-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Александр Пашков</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pashkov-mobile.webp 1x, img/stuff/pashkov-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pashkov-tablet.webp 1x, img/stuff/pashkov-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/pashkov-desktop.webp 1x, img/stuff/pashkov-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/pashkov-desktop.jpg" width="260" height="294" srcset="img/stuff/pashkov-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Александр Пашков</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
-                  <!--4 -->
+                  <!-- 4 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Мария Кетова</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/ketova-mobile.webp 1x, img/stuff/ketova-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/ketova-tablet.webp 1x, img/stuff/ketova-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/ketova-desktop.webp 1x, img/stuff/ketova-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/ketova-desktop.jpg" width="260" height="294" srcset="img/stuff/ketova-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Мария Кетова</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/ketova-mobile.webp 1x, img/stuff/ketova-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/ketova-tablet.webp 1x, img/stuff/ketova-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <!-- <source type="image/webp" srcset="img/stuff/ketova-desktop.webp 1x, img/stuff/ketova-desktop@2x.webp 2x"> -->
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/ketova-desktop.jpg" width="260" height="294" srcset="img/stuff/ketova-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Мария Кетова</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 5 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Режина Муартес</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pavlova-mobile.webp 1x, img/stuff/pavlova-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pavlova-tablet.webp 1x, img/stuff/pavlova-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/pavlova-desktop.webp 1x, img/stuff/pavlova-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/pavlova-desktop.jpg" width="260" height="294" srcset="img/stuff/pavlova-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Режина Муартес</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pavlova-mobile.webp 1x, img/stuff/pavlova-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/pavlova-tablet.webp 1x, img/stuff/pavlova-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/pavlova-desktop.webp 1x, img/stuff/pavlova-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/pavlova-desktop.jpg" width="260" height="294" srcset="img/stuff/pavlova-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Режина Муартес</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 6 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Анонио Фокундаз</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/lavrov-mobile.webp 1x, img/stuff/lavrov-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/lavrov-tablet.webp 1x, img/stuff/lavrov-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/lavrov-desktop.webp 1x, img/stuff/lavrov-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/lavrov-desktop.jpg" width="260" height="294" srcset="img/stuff/lavrov-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Анонио Фокундаз</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/lavrov-mobile.webp 1x, img/stuff/lavrov-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/lavrov-tablet.webp 1x, img/stuff/lavrov-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/lavrov-desktop.webp 1x, img/stuff/lavrov-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/lavrov-desktop.jpg" width="260" height="294" srcset="img/stuff/lavrov-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Анонио Фокундаз</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 7 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Габриэлло Муартес</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pashkov-mobile.webp 1x, img/stuff/pashkov-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/Pashkov-tablet.webp 1x, img/stuff/pashkov-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/pashkov-desktop.webp 1x, img/stuff/pashkov-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/pashkov-desktop.jpg" width="260" height="294" srcset="img/stuff/pashkov-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Габриэлло Муартес</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/pashkov-mobile.webp 1x, img/stuff/pashkov-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/Pashkov-tablet.webp 1x, img/stuff/pashkov-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/pashkov-desktop.webp 1x, img/stuff/pashkov-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/pashkov-desktop.jpg" width="260" height="294" srcset="img/stuff/pashkov-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Габриэлло Муартес</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                   <!-- 8 -->
                   <li class="swiper-slide slider__item">
-                    <div class="slider__header">
-                      <h3>Фабия Карлсон</h3>
-                    </div>
-                    <div class="slider__image">
-                      <picture>
-                        <!-- 1х: 226px; 2x: 452px -->
-                        <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/ketova-mobile.webp 1x, img/stuff/ketova-mobile.webp 2x">
-                        <!-- 1х: 268px; 2x: 536px -->
-                        <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/ketova-tablet.webp 1x, img/stuff/ketova-tablet@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <source type="image/webp" srcset="img/stuff/ketova-desktop.webp 1x, img/stuff/ketova-desktop@2x.webp 2x">
-                        <!-- 1х: 260px; 2x: 520px -->
-                        <img src="img/stuff/ketova-desktop.jpg" width="260" height="294" srcset="img/stuff/ketova-desktop@2x.jpg 2x" alt="Фотография тренера">
-                      </picture>
-                    </div>
-                    <div class="slider__info">
-                      <div class="slider__info-wrapper workcard">
+                    <div class="slider__item-container">
+                    <div class="slider__slide-wrapper">
+                      <div class="slider__header">
                         <h3>Фабия Карлсон</h3>
-                        <span>CrossFit</span>
-                        <ul class="workcard__list">
-                          <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
-                          <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
-                          <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
-                        </ul>
                       </div>
+                      <div class="slider__image">
+                        <picture>
+                          <!-- 1х: 226px; 2x: 452px -->
+                          <source type="image/webp" media="(max-width:767px)" srcset="img/stuff/ketova-mobile.webp 1x, img/stuff/ketova-mobile.webp 2x">
+                          <!-- 1х: 268px; 2x: 536px -->
+                          <source type="image/webp" media="(min-width:768px) and (max-width:1024px)" srcset="img/stuff/ketova-tablet.webp 1x, img/stuff/ketova-tablet@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <source type="image/webp" srcset="img/stuff/ketova-desktop.webp 1x, img/stuff/ketova-desktop@2x.webp 2x">
+                          <!-- 1х: 260px; 2x: 520px -->
+                          <img src="img/stuff/ketova-desktop.jpg" width="260" height="294" srcset="img/stuff/ketova-desktop@2x.jpg 2x" alt="Фотография тренера">
+                        </picture>
+                      </div>
+                      <div class="slider__info">
+                        <div class="slider__info-wrapper workcard">
+                          <h3>Фабия Карлсон</h3>
+                          <span>CrossFit</span>
+                          <ul class="workcard__list">
+                            <li class="workcard__list-item"><span>Certified Level 3 Trainer</span></li>
+                            <li class="workcard__list-item"><span>Победитель чемпионата России по CrossFit</span></li>
+                            <li class="workcard__list-item"><span>Опыт — 6 лет</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </li>
                 </ul>
@@ -621,6 +653,7 @@
                 <ul class="swiper-wrapper rewiews__list rewiews-list">
                   <!-- 1 -->
                   <li class="swiper-slide rewiews-list__item">
+                  <div class="rewiews-list__wrapper">
                     <div class="rewiews-list__container">
                       <div class="rewiews-list__image">
                       </div>
@@ -633,9 +666,11 @@
                         </p>
                       </div>
                     </div>
+                  </div>
                   </li>
                   <!-- 2 -->
                   <li class="swiper-slide rewiews-list__item">
+                  <div class="rewiews-list__wrapper">
                     <div class="rewiews-list__container">
                       <div class="rewiews-list__image">
                       </div>
@@ -644,10 +679,11 @@
                         <p>
                           «Хожу в SuperClub уже больше года.
                           Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный.
-                          Зал просторный, даже в вечернее время нет очередей»
+                          Зал просторный, даже<br> в вечернее время нет очередей»
                         </p>
                       </div>
                     </div>
+                  </div>
                   </li>
                 </ul>
               </div>
@@ -674,7 +710,7 @@
                           <li>
                           <div class="feedback__string-wrapper feedback__string-wrapper--phone">
                             <label for="phone-number"></label>
-                            <input id="phone-number" type="tel" name="phone" placeholder="Телефон" maxlength="20" required>
+                            <input id="phone-number" type="tel" name="phone" placeholder="Телефон" title="+7 (XXX) XXX-XX-XX" pattern="^\+7\s?\(\d{3}\)\s?\d{3}(-\d{2}){2}$" required>
                           </div>
                         </li>
                       </ul>
@@ -695,6 +731,10 @@
                       <address>г. Омск, ул. 60 лет Октября, 7</address>
                       <h3>График работы:</h3>
                       <span>Пн-Вс: с 8:00 до 22:00</span>
+                      <!-- <span>Пн-Вс: с 8:00 до 22:00</span>
+                      <span>Пн-Вс: с 8:00 до 22:00</span>
+                      <span>Пн-Вс: с 8:00 до 22:00</span>
+                      <span>Пн-Вс: с 8:00 до 22:00</span> -->
                     </div>
                     <div class="feedback__contacts">
                       <h3>Телефон:</h3>

@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import Swiper from 'swiper';
 const gymVideo = document.querySelector('[data-video]');
-const gymLink = document.querySelector('[data-link]');
+const gymContainer = document.querySelector('[data-container]');
 const gymButton = document.querySelector('[data-button]');
 const tabSection = document.querySelector('[data-tabs]');
 const tabButtons = tabSection.querySelectorAll('[data-tab]');
@@ -15,8 +15,6 @@ const rewiewsSection = document.querySelector('[data-rewiews]');
 const rewiewsSlider = rewiewsSection.querySelector('[data-slider]');
 const buttonRewiewsBack = rewiewsSection.querySelector('[data-back]');
 const buttonRewiewsNext = rewiewsSection.querySelector('[data-next]');
-const pageForm = document.querySelector('[autocomplete="off"]');
-const userPhones = document.querySelectorAll('input[type=tel]');
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
@@ -46,16 +44,15 @@ window.addEventListener('DOMContentLoaded', () => {
   if (coachesSlider) {
     const coachesSwiper = new Swiper(coachesSlider, {
       loop: true,
+      autoheight: true,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
       },
-
       navigation: {
         nextEl: buttonCoachesNext,
         prevEl: buttonCoachesBack,
       },
-
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -64,12 +61,12 @@ window.addEventListener('DOMContentLoaded', () => {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          spaceBetween: -5,
           initialSlide: 2,
         },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 40,
+          spaceBetween: -24,
           initialSlide: 0,
           simulateTouch: false,
         },
@@ -84,6 +81,8 @@ window.addEventListener('DOMContentLoaded', () => {
   if (rewiewsSlider) {
     const rewiewsSwiper = new Swiper(rewiewsSlider, {
       slidesPerView: 1,
+      spaceBetween: 10,
+      autoheight: true,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -103,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (gymButton) {
     gymButton.addEventListener('click', () => {
       createIFrame();
-      gymLink.classList.add('video__link--hidden');
+      gymContainer.classList.add('video__container--hidden');
       gymButton.classList.add('video__button--hidden');
     });
 
@@ -147,84 +146,46 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // -------------------------------
 
-  let getInputNumbersValue = function (input) {
-    return input.value.replace(/\D/g, '');
-  };
+  function mask(evt) {
+    const matrix = '+7 (___) ___-__-__';
+    let m = 0;
+    const def = matrix.replace(/\D/g, '');
+    let val = input.value.replace(/\D/g, '');
+    if (def.length >= val.length) {
+      val = def;
+    }
+    input.value = matrix.replace(/./g, function (a) {
 
-  if (userPhones) {
-    userPhones.forEach(function (el) {
-      el.addEventListener('input', function (e) {
-        const input = e.target;
-        const inputNumbersValue = getInputNumbersValue(input);
-
-        let formatedInputValue = ' ';
-
-        if (!inputNumbersValue) {
-          input.value = ' ';
-        }
-        if (['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].indexOf(inputNumbersValue[0]) > -1) {
-
-          let firstSymbols = '+7';
-
-          formatedInputValue = firstSymbols;
-
-          if (inputNumbersValue.length > 1) {
-            formatedInputValue += ' (' + inputNumbersValue.substring(1, 4);
-          }
-
-          if (inputNumbersValue.length >= 5) {
-            formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
-          }
-
-          if (inputNumbersValue.length >= 8) {
-            formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
-          }
-
-          if (inputNumbersValue.length >= 10) {
-            formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
-          }
-        }
-
-        input.value = formatedInputValue;
-        return formatedInputValue;
-      });
+      if (/[_\d]/.test(a) && m < val.length) {
+        return val.charAt(m++);
+      } else if (m >= val.length) {
+        return '';
+      } else {
+        return a;
+      }
     });
-
-    const onNumberKeyDown = function (e) {
-      const input = e.target;
-      if (e.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+    if (evt.type === 'blur') {
+      if (input.value.length === 2) {
         input.value = '';
       }
-    };
-
-    userPhones.forEach(function (el) {
-      el.addEventListener('keydown', onNumberKeyDown);
-    });
-
-    phoneChecker();
-  }
-
-  function phoneChecker() {
-    if (pageForm) {
-      pageForm.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-        userPhones.forEach((phone) => {
-          const valueLength = phone.value.length;
-          if (valueLength < 16) {
-            return;
-          }
-          pageForm.submit();
-        });
-      });
+    } else {
+      setCursorPosition (input.value.length, input);
     }
   }
+  const input = document.querySelector('[name="phone"]');
+  if (input) {
+    input.addEventListener('input', mask, false);
+    input.addEventListener('focus', mask, false);
+    input.addEventListener('blur', mask, false);
+  }
+
+});
 
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
+// все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+// в load следует добавить скрипты, не участвующие в работе первого экрана
+window.addEventListener('load', () => {
+  initModals();
 });
 
 // ---------------------------------

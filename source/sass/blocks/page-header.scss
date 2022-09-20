@@ -6,16 +6,16 @@
 .page-header__container {
   display: flex;
   justify-content: space-between;
-  max-width: 1160px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 15px;
 
   @media (max-width: $vp-1199) {
-    padding: 0 43px;
+    padding: 0 35px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 15px;
+    padding: 0 6px;
   }
 }
 
